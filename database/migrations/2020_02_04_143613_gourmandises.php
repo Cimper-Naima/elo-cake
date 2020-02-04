@@ -13,7 +13,13 @@ class Gourmandises extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('gourmandises', function(Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('category');
+            $table->string('name');
+            $table->mediumText('description');
+            $table->integer('quantity');
+        });
     }
 
     /**
@@ -23,6 +29,6 @@ class Gourmandises extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('gourmandises');
     }
 }
