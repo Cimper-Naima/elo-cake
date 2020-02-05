@@ -87,7 +87,7 @@ class GourmandiseController extends Controller
         $contact->country = $request->get('country');
         $contact->save();
 
-        return redirect('/contacts')->with('success', 'Contact updated!')
+        return redirect('/contacts')->with('success', 'Contact updated!');
     }
 
     /**
@@ -104,6 +104,6 @@ class GourmandiseController extends Controller
         $contact = Contact::find($id);
         $contact->delete();
 
-        return redirect('/contacts')->with('success', 'Contact deleted!')
+        return redirect('/contacts')->with('success', 'Contact deleted!');
     }
 }
