@@ -27,6 +27,7 @@ class GourmandisesTableSeeder extends Seeder
                 'description'=>'classique insert maracudja',
                 'quantity'=>'1',
             ]
-        );    
+        );   
+         
     }
 }

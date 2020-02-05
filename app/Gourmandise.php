@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cuppy extends Model
+class Gourmandise extends Model
 {
-    //
+    public $timestamps = false;
 }
