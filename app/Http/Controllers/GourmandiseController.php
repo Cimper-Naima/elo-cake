@@ -25,7 +25,7 @@ class GourmandiseController extends Controller
      */
     public function create()
     {
-        return view('contacts.create');
+        return view('create');
     }
 
     /**
@@ -36,7 +36,15 @@ class GourmandiseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'gourmandise_name' => 'required|max:255',
+            'genre' => 'required|max:255',
+            'imdb_rating' => 'required|numeric',
+            'lead_actor' => 'required|max:255',
+        ]);
+        $show = Show::create($validatedData);
+   
+        return redirect('/books')->with('success', 'La gourmandise a bien été enregistrée dans la base de données');
     }
 
     /**
