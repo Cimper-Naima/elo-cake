@@ -101,9 +101,9 @@ class GourmandiseController extends Controller
         $gourmandise->delete();
         return back()->with('info', 'La gourmandise a bien été supprimé dans la base de données.');
         
-        $contact = Contact::find($id);
-        $contact->delete();
+        // $contact = Contact::find($id);
+        // $contact->delete();
 
-        return redirect('/contacts')->with('success', 'Contact deleted!');
+        // return redirect('/contacts')->with('success', 'Contact deleted!');
     }
 }
