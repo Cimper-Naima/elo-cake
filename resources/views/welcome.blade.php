@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    El0_cake00
+                    El0_cake
                 </div>
 
                 <div class="links">
