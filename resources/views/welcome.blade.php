@@ -9,8 +9,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
-        <!-- Styles -->
-        
+        <!-- Styles --> 
         <style>
             html, body {
                 background-color: #fff;
@@ -71,10 +70,10 @@
                     @auth
                         <a href="{{ url('/home') }}">Accueil</a>
                     @else
-                        <a href="{{ route('login') }}">Se connecter</a>
+                        <a href="{{ route('login') }}">Connexion</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">S'inscrire</a>
+                            <a href="{{ route('register') }}">Inscription</a>
                         @endif
                     @endauth
                 </div>
@@ -82,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    El0_cake
+                    El0_cake00
                 </div>
 
                 <div class="links">
