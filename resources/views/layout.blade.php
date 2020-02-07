@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>El0_Cake</title>
   <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
   <div class="container">
