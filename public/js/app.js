@@ -49661,8 +49661,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/simplon/Documents/dev-web/elo/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/simplon/Documents/dev-web/elo/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/simplon-guy/Documents/devweb/elo-cake/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/simplon-guy/Documents/devweb/elo-cake/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
