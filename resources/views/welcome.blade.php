@@ -1,6 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 
+<<<<<<< HEAD
     <div class="content">
         <div>
             <h1 id="brand">El0_Cake</h1>
@@ -13,4 +14,13 @@
         </div>
 </div>
 
+=======
+      <div class="col-sm-12" id="branding">
+          <h1 id=brand>
+              El0_Cake</h1>
+          <p id=slogan>
+              Happiness in the belly!</p>
+</div>
+		
+>>>>>>> 3e4a2a39bc79ed685adeaa82e5ad832cfbe3cc20
 @endsection
