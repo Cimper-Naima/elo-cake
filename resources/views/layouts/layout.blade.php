@@ -57,12 +57,12 @@
 </header>
 
 <main>
-  <div class="container">
+  <!-- <div class="container"> -->
     @yield('content')
-  </div>
+  <!-- </div> -->
 </main>
 
-  <footer id="l-footer" class=" text-center py-2">
+  <footer id="l-footer" class="text-center py-2">
 <div class="container">
     <p class="mx-0 small">
         <br>Réalisé par Naïma CIMPER || Kathleen MALIALIN
