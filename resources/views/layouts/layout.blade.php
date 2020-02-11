@@ -8,8 +8,10 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
+
 <body>
-@section('header')
+
+<header>
 <div class="header">
 <nav class="navbar navbar-expand-sm navbar-dark bg-faded">
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,10 +49,14 @@
     @endif
 </nav>
 </div>
+</header>
+
+<main>
   <div class="container">
     @yield('content')
   </div>
-  @section('footer')
+</main>
+
   <footer id="l-footer" class=" text-center py-2">
 <div class="container">
     <p class="mx-0 small">
