@@ -53,12 +53,14 @@
   @section('footer')
   <footer id="l-footer" class=" text-center py-2">
 <div class="container">
-    <p class="mx-0 small"><a href="http://kevadams-officiel.fr">kevadams-officiel.fr</a>
-        <br>Réalisé par Naïma CIMPER || Kathleen MALIALIN pour Com Chez Vous<br>Copyright&copy;2020. Tous droits
+    <p class="mx-0 small">
+        <br>Réalisé par Naïma CIMPER || Kathleen MALIALIN
+        <br>Copyright&copy;2020. Tous droits
         réservés.
         <a href="">Mentions légales.</a>
             </p>
 </div>
-  <script src="{{ asset('js/app.js') }}" type="text/js"></script>
+</footer>
+  <!-- <script src="{{ asset('js/app.js') }}" type="text/js"></script> -->
 </body>
 </html>
