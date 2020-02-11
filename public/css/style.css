@@ -3,6 +3,14 @@ body{
     background-color: aquamarine;
 }
 
+#branding{
+    text-align: center;
+height: 50vh;}
+#brand{
+    font-size: 7em;}
+#slogan{
+    font-size: 2em;}
+
 #container{
     width:400px;
     margin:0 auto;
