@@ -11,7 +11,7 @@
 <body>
 @section('header')
 <div class="header">
-<nav class="navbar navbar-expand-sm navbar-light bg-faded">
+<nav class="navbar navbar-expand-sm navbar-dark bg-faded">
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
