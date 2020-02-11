@@ -33,20 +33,25 @@
 <li class="nav-item">
 <a class="nav-link" href="#">Contact</a>
 </li>
-</ul>
-<div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-    <div class="top-right links">
+@if (Route::has('login'))
         @auth
-        <a href="{{ url('/home') }}">Mon compte</a>
+        <li class="nav-item">
+        <a class="nav-link" href="{{ url('/home') }}">Mon compte</a>
+</li>
         @else
-        <a href="{{ route('login') }}">Connexion</a>
+        <li class="nav-item">
+        <a class="nav-link" href="{{ route('login') }}">Connexion</a>
+</li>
         @if (Route::has('register'))
-        <a href="{{ route('register') }}">Inscription</a>
+        <li class="nav-item">
+        <a class="nav-link" href="{{ route('register') }}">Inscription</a>
+</li>
         @endif
         @endauth
-    </div>
     @endif
+</ul>
+   
+</div>
 </nav>
 </div>
 </header>

@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- Home sweat Home -->
-<section id="branding">
+<section id="branding" class="row">
     <div class="col-sm-12">
         <h1 id="brand">
             El0_Cake</h1>
@@ -13,9 +13,9 @@
 <!-- end - Home sweat Home -->
 
 <!-- About -->
-<section>
+<section class="row justify-content-center">
 <div id="about" class="col-sm-8">
-
+<p>blablablabla</p>
 </div>
 </section>
 <!-- end - About -->
