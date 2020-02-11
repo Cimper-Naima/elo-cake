@@ -7,3 +7,4 @@
           <p id="slogan">
               Happiness in the belly!</p>
 </div>
+@endsection
