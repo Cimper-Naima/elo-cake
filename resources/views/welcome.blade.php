@@ -2,9 +2,9 @@
 @section('content')
 
       <div class="col-sm-12" id="branding">
-          <h1 id=brand>
+          <h1 id="brand">
               El0_Cake</h1>
-          <p id=slogan>
+          <p id="slogan">
               Happiness in the belly!</p>
 </div>
 		
