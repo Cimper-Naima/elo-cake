@@ -53,7 +53,7 @@ class GourmandiseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Gourmandise $gourmandise)
+    public function show(Gourmandise $gourmandises)
     {
         return view('show', compact('gourmandise'));
     }
