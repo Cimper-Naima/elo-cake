@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.layout')
 
 @section('content')
 <style>
@@ -31,11 +31,11 @@
               <input type="number" class="form-control" name="genre"/>
           </div>
           <div class="form-group">
-              <label for="price">Prix à l'unité:</label>
+              <label for="price">Prix à l'unité :</label>
               <input type="number" class="form-control" name="imdb_rating"/>
           </div>
           <div class="form-group">
-              <label for="quantity">Show Lead Actor :</label>
+              <label for="description">Description :</label>
               <input type="text" class="form-control" name="lead_actor"/>
           </div>
           <button type="submit" class="btn btn-primary">Créer</button>
