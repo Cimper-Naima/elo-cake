@@ -16,7 +16,7 @@ class GourmandiseController extends Controller
     public function index()
     {
         $gourmandises = Gourmandise::all();
-        print_r( $gourmandises);
+        return view('gourmandise', compact('gourmandises'));
     }
 
     /**
@@ -45,7 +45,7 @@ class GourmandiseController extends Controller
         ]);
         $show = Gourmandise::create($validatedData);
    
-        return redirect('/gourmandise')->with('success', 'La gourmandise a bien été enregistrée dans la base de données');
+        return redirect('/gourmandises')->with('success', 'La gourmandise a bien été enregistrée dans la base de données');
     }
 
     /**
@@ -65,11 +65,11 @@ class GourmandiseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($gourmandises)
     {
         
-        $contact = Contact::find($id);
-        return view('contacts.edit', compact('contact')); 
+        $gourmandises = Gourmandise::find($gourmandises);
+        return view('edit.blade', compact('edit')); 
     }
 
     /**
@@ -87,7 +87,7 @@ class GourmandiseController extends Controller
             'email'=>'required'
         ]);
 
-        $contact = Contact::find($id);
+        $contact = Contact::find($gourmandises);
         $contact->first_name =  $request->get('first_name');
         $contact->last_name = $request->get('last_name');
         $contact->email = $request->get('email');
