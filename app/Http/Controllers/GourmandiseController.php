@@ -45,7 +45,7 @@ class GourmandiseController extends Controller
         ]);
         $show = Gourmandise::create($validatedData);
    
-        return redirect('/gourmandises')->with('success', 'La gourmandise a bien été enregistrée dans la base de données');
+        return redirect('/gourmandise')->with('success', 'La gourmandise a bien été enregistrée dans la base de données');
     }
 
     /**
