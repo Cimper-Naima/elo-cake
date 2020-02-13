@@ -42,7 +42,7 @@ class GourmandiseController extends Controller
             'price' => 'required|numeric',
             'description' => 'required|max:255',
         ]);
-        $show = Show::create($validatedData);
+        $gourmandises = Show::create($validatedData);
    
         return redirect('/books')->with('success', 'La gourmandise a bien été enregistrée dans la base de données');
     }
