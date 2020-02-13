@@ -45,10 +45,10 @@ nav {
 
     text-align: center;
     height: 100vh;
-    padding-top:2em;
-    margin-top:0em;
-    background-image:url(/img/bg.jpg);
-    background-size:cover;
+    padding-top: 2em;
+    margin-top: 0em;
+    background-image: url(/img/bg.jpg);
+    background-size: cover;
 
 }
 
@@ -62,27 +62,41 @@ nav {
 #slogan {
 
     font-size: 2em;
-    
+
 }
 
 /* About */
 
 #about {
 
-    padding-top:2em;
-    margin-top:2em;
+    padding-top: 2em;
+    margin-top: 2em;
 
 }
 
-.img-fluid  {
-    
-   padding-right:0em;
-    
-    }
+.img-fluid {
 
-/* .carousel {
-    border : 1px dashed #ff0065;
-} */
+    padding-right: 0em;
+
+}
+
+/* Gluttony */
+#gluttony {
+
+    padding-top: 2em;
+    margin-top: 2em;
+
+}
+
+#cakerousel {
+    border: 1px dashed #ff0065;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left:auto;
+    margin-right: auto;
+    width: 40%;
+}
+
 /* layout */
 #l-footer {
 
