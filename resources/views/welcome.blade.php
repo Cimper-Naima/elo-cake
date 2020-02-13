@@ -26,10 +26,10 @@
 </section>
 <!-- end - About -->
 
-<!-- SLider Gourmandises -->
+<!-- Slider Gourmandises -->
 <section class="container">
 <div class="container-fluid">
-		
+<h1> Quelques gourmandises...</h1>
 <div id="cakerousel" class="carousel slide bg-inverse w-50 ml-auto mr-auto" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#cakerousel" data-slide-to="0" class="active"></li>
