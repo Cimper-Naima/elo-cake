@@ -57,14 +57,15 @@
 </header>
 
 <main>
-  <div class="container">
+  <!-- <div class="container"> -->
     @yield('content')
-  </div>
+  <!-- </div> -->
 </main>
 
-  <footer id="l-footer" class=" text-center py-2">
+  <footer id="l-footer" class="text-center py-2">
 <div class="container">
     <p class="mx-0 small">
+      insta : el0_cake || (+594)694.27.95.87
         <br>Réalisé par Naïma CIMPER || Kathleen MALIALIN
         <br>Copyright&copy;2020. Tous droits
         réservés.
@@ -72,6 +73,6 @@
             </p>
 </div>
 </footer>
-  <!-- <script src="{{ asset('js/app.js') }}" type="text/js"></script> -->
+  <script src="{{ asset('js/app.js') }}" type="text/js"></script>
 </body>
 </html>

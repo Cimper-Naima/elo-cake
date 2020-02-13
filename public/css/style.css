@@ -1,9 +1,12 @@
 /* Bases */
+/* * {
+    border : 1px solid red; 
+} */
 
-body {
-    /* background-image:url(/img/bg.jpg); */
+/* body {
+    background-image:url(/img/bg.jpg);
     background-color: #f5d88c;
-}
+} */
 
 /* Navbar */
 nav {
@@ -40,31 +43,59 @@ nav {
 #branding {
 
     text-align: center;
-    /* height: 50vh; */
+    height: 100vh;
+    padding-top: 2em;
+    margin-top: 0em;
+    background-image: url(/img/bg.jpg);
+    background-size: cover;
 
 }
 
 #brand {
 
     font-size: 7em;
+    padding-top: 0em;
 
 }
 
 #slogan {
 
     font-size: 2em;
-    
+
 }
 
 /* About */
 
 #about {
-    text-align: center;
-    background-color: #ffff;
-    border-bottom: 1px solid #0b0b0b;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+    padding-top: 2em;
+    margin-top: 2em;
 
 }
+
+.img-fluid {
+
+    padding-right: 0em;
+
+}
+
+/* Gluttony */
+#gluttony {
+
+    padding-top: 2em;
+    margin-top: 2em;
+
+}
+
+#cakerousel {
+    border: 1px dashed #ff0065;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left:auto;
+    margin-right: auto;
+    width: 40%;
+}
+
 /* layout */
 #l-footer {
 
