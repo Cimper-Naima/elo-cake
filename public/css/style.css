@@ -3,10 +3,10 @@
     border : 1px solid red; 
 } */
 
-body {
-    /* background-image:url(/img/bg.jpg); */
-    /* background-color: #f5d88c; */
-}
+/* body {
+    background-image:url(/img/bg.jpg);
+    background-color: #f5d88c;
+} */
 
 /* Navbar */
 nav {
@@ -79,7 +79,7 @@ nav {
     
     }
 
-/* .gourmandise {
+/* .carousel {
     border : 1px dashed #ff0065;
 } */
 /* layout */
