@@ -96,6 +96,15 @@ nav {
     width: 40%;
 }
 
+#connected {
+    text-align: center;
+    height: 100vh;
+    padding-top: 2em;
+    margin-top: 0em;
+    background-image: url(/img/bg.jpg);
+    background-size: cover;
+}
+
 /* layout */
 #l-footer {
 
