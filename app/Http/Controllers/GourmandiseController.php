@@ -16,7 +16,7 @@ class GourmandiseController extends Controller
     public function index()
     {
         $gourmandises = Gourmandise::all();
-        return view( $gourmandises);
+        print_r( $gourmandises);
     }
 
     /**
