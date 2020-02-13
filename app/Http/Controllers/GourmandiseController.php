@@ -38,9 +38,9 @@ class GourmandiseController extends Controller
     {
         $validatedData = $request->validate([
             'gourmandise_name' => 'required|max:255',
-            'genre' => 'required|max:255',
-            'imdb_rating' => 'required|numeric',
-            'lead_actor' => 'required|max:255',
+            'quantity' => 'required|max:255',
+            'price' => 'required|numeric',
+            'description' => 'required|max:255',
         ]);
         $show = Show::create($validatedData);
    

@@ -28,15 +28,15 @@
           </div>
           <div class="form-group">
               <label for="price">Quantité :</label>
-              <input type="number" class="form-control" name="genre"/>
+              <input type="number" class="form-control" name="quantity"/>
           </div>
           <div class="form-group">
               <label for="price">Prix à l'unité :</label>
-              <input type="number" class="form-control" name="imdb_rating"/>
+              <input type="number" class="form-control" name="price"/>
           </div>
           <div class="form-group">
               <label for="description">Description :</label>
-              <input type="text" class="form-control" name="lead_actor"/>
+              <input type="text" class="form-control" name="description"/>
           </div>
           <button type="submit" class="btn btn-primary">Créer</button>
       </form>
