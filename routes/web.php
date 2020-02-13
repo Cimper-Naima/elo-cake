@@ -23,3 +23,5 @@ Route::resource('gourmandises', 'GourmandiseController');
 Route::get('/layout', function () {
     return view('layout');
 });
+
+Route::get('/create', 'GourmandiseController@create')->name('create');
