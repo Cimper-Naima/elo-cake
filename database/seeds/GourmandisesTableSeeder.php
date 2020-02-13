@@ -13,8 +13,8 @@ class GourmandisesTableSeeder extends Seeder
     {
         App\Gourmandise::create(
             [
-                'name' => 'vanilo',
-                'category'=>'cupcake',
+                'category' => 'cupcake',
+                'name'=>'vanilo',
                 'description'=>'classique goût vanille',
                 'quantity'=>'2',
             ]
@@ -22,8 +22,8 @@ class GourmandisesTableSeeder extends Seeder
         
         App\Gourmandise::create(
             [
-                'name' => 'maracu',
                 'category'=>'cupcake',
+                'name' => 'maracu',
                 'description'=>'classique insert maracudja',
                 'quantity'=>'1',
             ]

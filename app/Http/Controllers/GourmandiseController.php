@@ -12,6 +12,7 @@ class GourmandiseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
         $gourmandises = Gourmandise::all();
@@ -37,14 +38,14 @@ class GourmandiseController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'gourmandise_name' => 'required|max:255',
-            'quantity' => 'required|max:255',
-            'price' => 'required|numeric',
+            'category' => 'required|max:255',
+            'name' => 'required|max:255',
             'description' => 'required|max:255',
+            'quantity' => 'required|numeric',
         ]);
-        $show = Show::create($validatedData);
+        $show = Gourmandise::create($validatedData);
    
-        return redirect('/books')->with('success', 'La gourmandise a bien été enregistrée dans la base de données');
+        return redirect('/gourmandises')->with('success', 'La gourmandise a bien été enregistrée dans la base de données');
     }
 
     /**
