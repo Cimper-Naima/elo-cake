@@ -26,11 +26,12 @@
 </section>
 <!-- end - About -->
 
-<!-- Slider Gourmandises -->
+<!-- Gluttony -->
 <section class="container">
-<div class="container-fluid">
+<div id="gluttony" class="container-fluid">
 <h1> Quelques gourmandises...</h1>
-<div id="cakerousel" class="carousel slide bg-inverse w-50 ml-auto mr-auto" data-ride="carousel">
+<p> Vous pouvez retrouver toutes ces gourmandises dans l'onglet "Gourmandises".</p>
+<div id="cakerousel" class="carousel slide bg-inverse " data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#cakerousel" data-slide-to="0" class="active"></li>
     <li data-target="#cakerousel" data-slide-to="1"></li>
