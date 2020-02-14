@@ -141,21 +141,27 @@ p {
 
     text-transform: uppercase;
     font-weight: bold;
+
 }
 
 .card-text {
-
     text-align: left;
-
 }
 
 .card-img {
     display: block;
+    float: left;
     width: 5em;
-    margin-left:auto;
+    margin-left:2em;
     margin-right: auto;
 }
 
+#form-btn {
+    padding: 0em;
+    margin:0em;
+    float:right;
+    background: transparent;
+}
 /*-------------------- */
 /* end - gourmandise.blade */
 /*-------------------- */

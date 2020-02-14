@@ -56,7 +56,7 @@ class GourmandiseController extends Controller
      */
     public function show(Gourmandise $gourmandises)
     {
-        return view('show', compact('gourmandise'));
+        return view('gourmandise', compact('gourmandise'));
     }
 
     /**
@@ -65,13 +65,19 @@ class GourmandiseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    // public function edit($gourmandises)
+    // {
+        
+    //     $gourmandises = Gourmandise::find($gourmandises);
+    //     return view('edit.blade', compact('edit')); 
+    // }
+
     public function edit($gourmandises)
     {
         
         $gourmandises = Gourmandise::find($gourmandises);
-        return view('edit.blade', compact('edit')); 
+        return view('edit', compact('gourmandises')); 
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -79,26 +85,18 @@ class GourmandiseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $gourmandises)
     {
-        $request->validate([
-            'first_name'=>'required',
-            'last_name'=>'required',
-            'email'=>'required'
-        ]);
-
-        $contact = Contact::find($gourmandises);
-        $contact->first_name =  $request->get('first_name');
-        $contact->last_name = $request->get('last_name');
-        $contact->email = $request->get('email');
-        $contact->job_title = $request->get('job_title');
-        $contact->city = $request->get('city');
-        $contact->country = $request->get('country');
-        $contact->save();
-
-        return redirect('/contacts')->with('success', 'Contact updated!');
+            $validatedData = $request->validate([
+                'category' => 'required|max:255',
+                'name' => 'required|max:255',
+                'description' => 'required|max:255',
+                'quantity' => 'required|numeric',
+            ]);
+            Gourmandise::whereId($gourmandises)->update($validatedData);
+    
+            return redirect('/gourmandises')->with('success', 'La gourmandise a bien été modifiée');
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -109,10 +107,5 @@ class GourmandiseController extends Controller
     {
         $gourmandise->delete();
         return back()->with('info', 'La gourmandise a bien été supprimé dans la base de données.');
-        
-        // $contact = Contact::find($id);
-        // $contact->delete();
-
-        // return redirect('/contacts')->with('success', 'Contact deleted!');
     }
 }
