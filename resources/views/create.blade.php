@@ -1,12 +1,8 @@
 @extends('layouts.layout')
-
+<div id="body" class="main-color">
 @section('content')
-
-<div class="l-bg">
-<div class="other-card">
-  <div class="card-header">
-    Ajouter des gourmandises
-  </div>
+ 
+  <h1 class="justify-content-center text-center">Ajouter de nouvelles gourmandises</h1>
   <div class="card-body">
     @if ($errors->any())
       <div class="alert alert-danger">
@@ -24,20 +20,19 @@
               <input type="text" class="form-control" name="category"/>
           </div>
           <div class="form-group">
-              <label for="name">Nom de la gourmandise:</label>
+              <label for="name">Nom de la gourmandise :</label>
               <input type="text" class="form-control" name="name"/>
           </div>
           <div class="form-group">
-              <label for="description">Description:</label>
+              <label for="description">Description :</label>
               <input type="text" class="form-control" name="description"/>
           </div>
           <div class="form-group">
-              <label for="quantity">Quantité:</label>
+              <label for="quantity">Quantité :</label>
               <input type="number" class="form-control" name="quantity"/>
           </div>
-          <button type="submit" class="btn btn-primary">Créer</button>
+          <button type="submit" class="btn btn-dark">Créer</button>
       </form>
   </div>
-</div>
 </div>
 @endsection

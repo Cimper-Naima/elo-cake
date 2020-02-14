@@ -1,5 +1,5 @@
 @extends('layouts.layout')
-
+<div id="body" class="main-color">
 @section('content')
 <div>
     @if(session()->get('success'))
@@ -60,5 +60,6 @@
                     @endforeach
                 </tbody>
     </table>
+</div>
 </div>
 @endsection

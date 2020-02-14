@@ -13,9 +13,11 @@
 <!-- end - Header -->
 
 <!-- A-propos -->
+<div class="scallop-up"></div>
 <section class="container">
 <div id="a-propos" class="row">
     <div class="col-sm-8">
+<!-- <div class="colour-block"> -->
     <h1>Qui sommes-nous ?</h1>
 <p>Cupcake ipsum dolor sit amet gingerbread sugar plum. Pie tiramisu candy canes gingerbread cotton candy carrot cake pudding muffin. Toffee I love cake sugar plum chocolate. Macaroon I love cheesecake chocolate marshmallow caramels I love carrot cake. I love powder tootsie roll topping bear claw dragée. Gingerbread I love cake sesame snaps bonbon wafer bear claw lollipop. Soufflé gummi bears wafer bonbon jujubes icing pie macaroon cupcake. Ice cream topping macaroon tart muffin sugar plum. Sweet roll gummi bears liquorice muffin sugar plum icing topping cheesecake jelly beans. Liquorice sweet sweet roll jujubes bonbon sesame snaps. Tiramisu tootsie roll sweet muffin cake I love I love cupcake. Icing chupa chups macaroon I love cake I love gingerbread pastry sweet roll. Pudding sugar plum I love gummi bears liquorice jelly tart croissant macaroon. Lollipop donut jelly gummies.</p>
 </div>
@@ -24,10 +26,11 @@
 </div>
 </div>
 </section>
+<div class="scallop-up"></div>
 <!-- end - À propos -->
 
 <!-- Gourmandises -->
-<section class="container">
+<section id="cakerousel-bg" class="container">
 <div id="gourmandises" class="container-fluid">
 <h1> Quelques gourmandises...</h1>
 <p> Vous pouvez retrouver toutes ces gourmandises dans l'onglet "Gourmandises".</p>
@@ -56,6 +59,8 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Suivant</span>
   </a>
+<!-- </div> -->
+</div>
 </div>
 </div>
 </section>
