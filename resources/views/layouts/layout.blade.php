@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>El0_Cake</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
@@ -19,19 +20,19 @@
 </button>
 
 <!-- Brand -->
-<a class="navbar-brand" href="#">El0_Cake</a>
+<a class="navbar-brand" href="{{ url('/') }}">El0_Cake</a>
 
 <!-- Links -->
 <div class="collapse navbar-collapse justify-content-end" id="nav-content">   
 <ul class="navbar-nav">
 <li class="nav-item">
-<a class="nav-link" href="#">Accueil</a>
+<a class="nav-link" href="{{ url('/') }}">Accueil</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="#">Gourmandises</a>
+<a class="nav-link" href="{{ url('/gourmandises') }}">Gourmandises</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="#">Contact</a>
+<a class="nav-link" href="{{ url('/contact') }}">Contact</a>
 </li>
 @if (Route::has('login'))
         @auth
@@ -65,7 +66,8 @@
   <footer id="l-footer" class="text-center py-2">
 <div class="container">
     <p class="mx-0 small">
-      insta : el0_cake || (+594)694.27.95.87
+    <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>el0_cake 
+    <i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i>(+594)694.27.95.87
         <br>Réalisé par Naïma CIMPER || Kathleen MALIALIN
         <br>Copyright&copy;2020. Tous droits
         réservés.

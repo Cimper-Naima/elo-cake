@@ -8661,10 +8661,10 @@ button.bg-dark:focus {
     padding-right: 1.5rem !important;
 }
 
-.pb-4,
+/* .pb-4,
 .py-4 {
-    /* padding-bottom: 1.5rem !important; */
-}
+    padding-bottom: 1.5rem !important;
+} */
 
 .pl-4,
 .px-4 {

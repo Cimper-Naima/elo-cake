@@ -14,10 +14,15 @@
 #body-register {
     height: 106.8vh;  
 }
+
+i {
+    margin-right:0.5em; 
+}
 /* Title && Text */
 #title {
     padding-top: 3em;
 }
+
 h2 {
 
     text-transform: uppercase;
