@@ -31,7 +31,9 @@
               <label for="quantity">Quantité :</label>
               <input type="number" class="form-control" name="quantity"/>
           </div>
-          <button type="submit" class="btn btn-dark">Créer</button>
+          
+          <button type="submit" class="btn btn-dark btn-lg btn-block">Créer</button>
+
       </form>
   </div>
 </div>
