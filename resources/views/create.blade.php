@@ -1,12 +1,9 @@
 @extends('layouts.layout')
 
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
-<div class="card uper">
+
+<div class="l-bg">
+<div class="other-card">
   <div class="card-header">
     Ajouter des gourmandises
   </div>
@@ -41,5 +38,6 @@
           <button type="submit" class="btn btn-primary">Créer</button>
       </form>
   </div>
+</div>
 </div>
 @endsection
