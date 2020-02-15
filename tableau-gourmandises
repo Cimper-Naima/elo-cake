@@ -1,0 +1,31 @@
+<thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>Nom</td>
+                        <td>Catégorie</td>
+                        <td>Description</td>
+                        <td>Quantité</td>
+                        <td colspan="2">Action</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($gourmandises as $gourmandise)
+                    <tr>
+                        <td>{{$gourmandise->id}}</td>
+                        <td>{{$gourmandise->category}}</td>
+                        <td>{{$gourmandise->name}}</td>
+                        <td>{{$gourmandise->description}}</td>
+                        <td>{{number_format($gourmandise->quantity,2)}}</td>
+                        <td><a href="{{ route('gourmandises.edit', $gourmandise->id)}}" class="btn btn-primary">Edit</a>
+                        </td>
+                        <td>
+                            <form action="{{ route('gourmandises.destroy', $gourmandise->id)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button class="btn btn-danger" type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+    </table>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Gourmandise;
+use App\Categorie;
 
 class GourmandiseController extends Controller
 {
@@ -12,10 +13,11 @@ class GourmandiseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
-        $gourmandises = Gourmandise::all();
-        print_r( $gourmandises);
+        $gourmandises = Gourmandise::with('categorie')->get();
+        return view('gourmandise', compact('gourmandises'));
     }
 
     /**
@@ -25,7 +27,8 @@ class GourmandiseController extends Controller
      */
     public function create()
     {
-        return view('create');
+        $categories = Categorie::all();
+        return view('create', compact('categories'));
     }
 
     /**
@@ -37,14 +40,15 @@ class GourmandiseController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'gourmandise_name' => 'required|max:255',
-            'genre' => 'required|max:255',
-            'imdb_rating' => 'required|numeric',
-            'lead_actor' => 'required|max:255',
+            'name' => 'required|max:255',
+            'description' => 'required|max:255',
+            'prix' => 'required|numeric',
+            'categorie_id' => 'required|numeric', 
         ]);
-        $show = Show::create($validatedData);
+
+        $show = Gourmandise::create($validatedData);
    
-        return redirect('/books')->with('success', 'La gourmandise a bien été enregistrée dans la base de données');
+        return redirect('/gourmandises')->with('success', 'La gourmandise a bien été enregistrée dans la base de données');
     }
 
     /**
@@ -53,9 +57,9 @@ class GourmandiseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Gourmandise $gourmandise)
+    public function show(Gourmandise $gourmandises)
     {
-        return view('show', compact('gourmandise'));
+        return view('gourmandise', compact('gourmandise'));
     }
 
     /**
@@ -64,13 +68,20 @@ class GourmandiseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    // public function edit($gourmandises)
+    // {
+        
+    //     $gourmandises = Gourmandise::find($gourmandises);
+    //     return view('edit.blade', compact('edit')); 
+    // }
+
+    public function edit($gourmandises)
     {
         
-        $contact = Contact::find($id);
-        return view('contacts.edit', compact('contact')); 
+        $gourmandises = Gourmandise::find($gourmandises);
+        $categories = Categorie::all();
+        return view('edit', compact('gourmandises','categories')); 
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -78,26 +89,17 @@ class GourmandiseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $gourmandises)
     {
-        $request->validate([
-            'first_name'=>'required',
-            'last_name'=>'required',
-            'email'=>'required'
-        ]);
-
-        $contact = Contact::find($id);
-        $contact->first_name =  $request->get('first_name');
-        $contact->last_name = $request->get('last_name');
-        $contact->email = $request->get('email');
-        $contact->job_title = $request->get('job_title');
-        $contact->city = $request->get('city');
-        $contact->country = $request->get('country');
-        $contact->save();
-
-        return redirect('/contacts')->with('success', 'Contact updated!');
+            $validatedData = $request->validate([
+                'name' => 'required|max:255',
+                'description' => 'required|max:255',
+                'prix' => 'required|numeric',
+            ]);
+            Gourmandise::whereId($gourmandises)->update($validatedData);
+    
+            return redirect('/gourmandises')->with('success', 'La gourmandise a bien été modifiée');
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -108,10 +110,5 @@ class GourmandiseController extends Controller
     {
         $gourmandise->delete();
         return back()->with('info', 'La gourmandise a bien été supprimé dans la base de données.');
-        
-        // $contact = Contact::find($id);
-        // $contact->delete();
-
-        // return redirect('/contacts')->with('success', 'Contact deleted!');
     }
 }

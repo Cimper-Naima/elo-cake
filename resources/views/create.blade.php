@@ -1,15 +1,9 @@
-@extends('layout')
-
+@extends('layouts.layout')
 @section('content')
-<style>
-  .uper {
-    margin-top: 40px;
-  }
-</style>
-<div class="card uper">
-  <div class="card-header">
-    Ajouter des gourmandises
-  </div>
+ 
+<div id="body" class="main-color">
+  
+  <h1 id="title" class="justify-content-center text-center">Ajouter de nouvelles gourmandises</h1>
   <div class="card-body">
     @if ($errors->any())
       <div class="alert alert-danger">
@@ -20,25 +14,33 @@
         </ul>
       </div><br />
     @endif
-      <form method="post" action="{{ route('gourmandises.store') }}">
-          <div class="form-group">
+      <form id="form-plce" method="post" action="{{ route('gourmandises.store') }}">
+          <!-- <div class="form-group">
               @csrf
-              <label for="name">Nom :</label>
-              <input type="text" class="form-control" name="gourmandise_name"/>
+              <label for="category">Catégorie :</label>
+              <input type="text" class="form-control" name="category"/>
+          </div> -->
+          <select name="categorie_id">
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+            </select>
+          <div class="form-group">
+          @csrf
+              <label for="name">Nom de la gourmandise :</label>
+              <input type="text" class="form-control" name="name"/>
           </div>
           <div class="form-group">
-              <label for="price">Quantité :</label>
-              <input type="number" class="form-control" name="genre"/>
+              <label for="description">Description :</label>
+              <input type="text" class="form-control" name="description"/>
           </div>
           <div class="form-group">
-              <label for="price">Prix à l'unité:</label>
-              <input type="number" class="form-control" name="imdb_rating"/>
+              <label for="prix">Prix :</label>
+              <input type="number" class="form-control" name="prix"/>
           </div>
-          <div class="form-group">
-              <label for="quantity">Show Lead Actor :</label>
-              <input type="text" class="form-control" name="lead_actor"/>
-          </div>
-          <button type="submit" class="btn btn-primary">Créer</button>
+          
+          <button type="submit" class="btn btn-dark btn-lg btn-block">Créer</button>
+
       </form>
   </div>
 </div>

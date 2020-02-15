@@ -1,34 +1,38 @@
 @extends('layouts.layout')
 @section('content')
 
-<!-- Home sweat Home -->
+<!-- Header -->
 <section id="branding">
     <div class="col-sm-12">
-        <h1 id="brand">
+        <h1 id="logo">
             El0_Cake</h1>
-        <p id="slogan">
-            Happiness in the belly!</p>
+        <!-- <p id="slogan">
+            Happiness in the belly!</p> -->
+            <blockquote id="slogan">“À mon sens, la gourmandise n'est pas un péché mais plutôt une qualité.” <br>- Catherine DENEUVE</blockquote>
     </div>
 </section>
-<!-- end - Home sweat Home -->
+<!-- end - Header -->
 
-<!-- About -->
+<!-- A-propos -->
+<div class="scallop-up"></div>
 <section class="container">
-<div id="about" class="row">
+<div id="a-propos" class="row">
     <div class="col-sm-8">
+<!-- <div class="colour-block"> -->
     <h1>Qui sommes-nous ?</h1>
-<p>blablablabla</p>
+<p>Cupcake ipsum dolor sit amet gingerbread sugar plum. Pie tiramisu candy canes gingerbread cotton candy carrot cake pudding muffin. Toffee I love cake sugar plum chocolate. Macaroon I love cheesecake chocolate marshmallow caramels I love carrot cake. I love powder tootsie roll topping bear claw dragée. Gingerbread I love cake sesame snaps bonbon wafer bear claw lollipop. Soufflé gummi bears wafer bonbon jujubes icing pie macaroon cupcake. Ice cream topping macaroon tart muffin sugar plum. Sweet roll gummi bears liquorice muffin sugar plum icing topping cheesecake jelly beans. Liquorice sweet sweet roll jujubes bonbon sesame snaps. Tiramisu tootsie roll sweet muffin cake I love I love cupcake. Icing chupa chups macaroon I love cake I love gingerbread pastry sweet roll. Pudding sugar plum I love gummi bears liquorice jelly tart croissant macaroon. Lollipop donut jelly gummies.</p>
 </div>
 <div class="col-sm-4">
-<img src="{{ asset('img/cupcake.png') }}" class="img-fluid" alt="" />
+<img src="{{ asset('img/cupcake.png') }}" class="img-fluid" alt="dessin-cupcake" />
 </div>
 </div>
 </section>
-<!-- end - About -->
+<div class="scallop-up"></div>
+<!-- end - À propos -->
 
-<!-- Gluttony -->
-<section class="container">
-<div id="gluttony" class="container-fluid">
+<!-- Gourmandises -->
+<section id="cakerousel-bg" class="container">
+<div id="gourmandises" class="container-fluid">
 <h1> Quelques gourmandises...</h1>
 <p> Vous pouvez retrouver toutes ces gourmandises dans l'onglet "Gourmandises".</p>
 <div id="cakerousel" class="carousel slide bg-inverse " data-ride="carousel">
@@ -56,10 +60,12 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Suivant</span>
   </a>
+<!-- </div> -->
+</div>
 </div>
 </div>
 </section>
-<!-- end - Slider Gourmandises -->
+<!-- end - Gourmandises -->
 
 <!-- jQuery library -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

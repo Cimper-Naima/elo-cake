@@ -1,12 +1,12 @@
 @extends('layouts.app')
-
+<div class="main-color">
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center text-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Connexion') }}</div>
-
+            <!-- <div class="card"> -->
+                <!-- <div class="card-header">{{ __('Connexion') }}</div> -->
+<h1>{{ __('Connexion') }}</h1>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -66,8 +66,9 @@
                         </div>
                     </form>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
     </div>
+</div>
 </div>
 @endsection

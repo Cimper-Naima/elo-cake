@@ -20,8 +20,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('gourmandises', 'GourmandiseController');
 
-Route::get('/layout', function () {
-    return view('layout');
+Route::get('/gourmandise', function () {
+    return view('gourmandise');
 });
 
-Route::get('/create', 'GourmandiseController@create')->name('create');
+// Route::get('/layout', function () {
+//     return view('layout');
+// });
+
