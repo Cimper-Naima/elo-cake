@@ -12,8 +12,9 @@
             <div class="container">
             <div class="row">
             @foreach($gourmandises as $gourmandise)
-                <div class="col-12 col-sm-12  my-lg-4 mb-4">
-                    <div class="card col-lg-6 text-black bg-warning mb-3">
+                <div class="col-12 col-sm-12 col-lg-6 my-lg-4 mb-4">
+                    <div class="card text-black bg-warning mb-3">
+
   <div class="card-body">
   <a href="{{ route('gourmandises.edit', $gourmandise->id)}}" class="btn btn-primary">Éditer</a>
 
@@ -22,11 +23,21 @@
     @method('DELETE')
     <button class="btn btn-danger" type="submit">Supprimer</button>
 </form>
-    <h5 class="card-title">{{$gourmandise->category}}</h5>
-    <h6 class="card-subtitle">{{$gourmandise->name}}</h6>
-    <img class="card-img" src="{{ asset('img/cupcake.png') }}" alt="Card image cap">
+<div class="row">
+    <div class="col-11">
+    <h3 class="card-title">{{$gourmandise->category}}</h3>
+    <h4 class="card-subtitle">{{$gourmandise->name}}</h4>
     <p class="card-text">{{$gourmandise->description}}</p>
-  </div>
+    </div>
+
+    <div class="col-1 my-auto">
+
+    <img class="card-img" src="{{ asset('img/cupcake.png') }}" alt="Card image cap">
+
+    </div>
+    </div>  
+ 
+    </div>
 </div>
                         
                     </div>
