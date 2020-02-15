@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Gourmandise;
+use App\Categorie;
 
 class GourmandiseController extends Controller
 {
@@ -15,7 +16,7 @@ class GourmandiseController extends Controller
 
     public function index()
     {
-        $gourmandises = Gourmandise::all();
+        $gourmandises = Gourmandise::with('categorie')->get();
         return view('gourmandise', compact('gourmandises'));
     }
 
@@ -26,7 +27,8 @@ class GourmandiseController extends Controller
      */
     public function create()
     {
-        return view('create');
+        $categories = Categorie::all();
+        return view('create', compact('categories'));
     }
 
     /**
@@ -38,11 +40,12 @@ class GourmandiseController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'category' => 'required|max:255',
             'name' => 'required|max:255',
             'description' => 'required|max:255',
-            'quantity' => 'required|numeric',
+            'prix' => 'required|numeric',
+            'categorie_id' => 'required|numeric', 
         ]);
+
         $show = Gourmandise::create($validatedData);
    
         return redirect('/gourmandises')->with('success', 'La gourmandise a bien été enregistrée dans la base de données');
@@ -76,7 +79,8 @@ class GourmandiseController extends Controller
     {
         
         $gourmandises = Gourmandise::find($gourmandises);
-        return view('edit', compact('gourmandises')); 
+        $categories = Categorie::all();
+        return view('edit', compact('gourmandises','categories')); 
     }
     /**
      * Update the specified resource in storage.
@@ -88,10 +92,9 @@ class GourmandiseController extends Controller
     public function update(Request $request, $gourmandises)
     {
             $validatedData = $request->validate([
-                'category' => 'required|max:255',
                 'name' => 'required|max:255',
                 'description' => 'required|max:255',
-                'quantity' => 'required|numeric',
+                'prix' => 'required|numeric',
             ]);
             Gourmandise::whereId($gourmandises)->update($validatedData);
     

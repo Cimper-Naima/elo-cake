@@ -10,22 +10,14 @@ class GourmandisesTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        App\Gourmandise::create(
-            [
-                'category' => 'cupcake',
-                'name'=>'vanilo',
-                'description'=>'classique goût vanille',
-                'quantity'=>'2',
-            ]
-        );   
+    { 
         
         App\Gourmandise::create(
             [
-                'category'=>'cupcake',
                 'name' => 'maracu',
                 'description'=>'classique insert maracudja',
-                'quantity'=>'1',
+                'prix'=>'1',
+                'categorie_id' => 1
             ]
         );   
          

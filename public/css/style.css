@@ -171,9 +171,11 @@ p {
     width: 5em;
     margin-left:2em;
     margin-right: auto;
-    /* align-items:center; */
 }
 
+.prix {
+    float: right;
+}
 #form-btn {
     padding: 0em;
     margin:0em;

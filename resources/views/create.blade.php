@@ -15,12 +15,18 @@
       </div><br />
     @endif
       <form id="form-plce" method="post" action="{{ route('gourmandises.store') }}">
-          <div class="form-group">
+          <!-- <div class="form-group">
               @csrf
               <label for="category">Catégorie :</label>
               <input type="text" class="form-control" name="category"/>
-          </div>
+          </div> -->
+          <select name="categorie_id">
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+            </select>
           <div class="form-group">
+          @csrf
               <label for="name">Nom de la gourmandise :</label>
               <input type="text" class="form-control" name="name"/>
           </div>
@@ -29,8 +35,8 @@
               <input type="text" class="form-control" name="description"/>
           </div>
           <div class="form-group">
-              <label for="quantity">Quantité :</label>
-              <input type="number" class="form-control" name="quantity"/>
+              <label for="prix">Prix :</label>
+              <input type="number" class="form-control" name="prix"/>
           </div>
           
           <button type="submit" class="btn btn-dark btn-lg btn-block">Créer</button>

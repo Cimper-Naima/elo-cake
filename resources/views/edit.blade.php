@@ -14,13 +14,21 @@
       </div><br />
     @endif
     <form id="form-plce" method="post" action="{{ route('gourmandises.update', $gourmandises->id)}}">
+    
+    
+    <div class="form-group">
+              <label for="name">Catégorie :</label>
+    <select name="categorie_id">
+              <option value="{{ $gourmandises->categorie->id }}" selected>{{ $gourmandises->categorie->name }}</option>
+              <option value="">----</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach
+            </select>
+</div>
           <div class="form-group">
-              @csrf
+          @csrf
               @method('PATCH')
-              <label for="category">Catégorie :</label>
-              <input type="text" class="form-control" name="category" value="{{ $gourmandises->category }}"/>
-          </div>
-          <div class="form-group">
               <label for="name">Nom de la gourmandise :</label>
               <input type="text" class="form-control" name="name" value="{{ $gourmandises->name }}"/>
           </div>
@@ -29,8 +37,8 @@
               <input type="text" class="form-control" name="description" value="{{ $gourmandises->description  }}"/>
           </div>
           <div class="form-group">
-              <label for="quantity">Quantité :</label>
-              <input type="text" class="form-control" name="quantity" value="{{ number_format($gourmandises->quantity, 2)  }}"/>
+              <label for="prix">Prix :</label>
+              <input type="number" class="form-control" name="prix" value="{{ number_format($gourmandises->prix, 2)  }}"/>
           </div>
           <button type="submit" class="btn btn-dark btn-lg btn-block">Modifier</button>
       </form>

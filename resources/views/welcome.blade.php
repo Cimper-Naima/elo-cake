@@ -6,8 +6,9 @@
     <div class="col-sm-12">
         <h1 id="logo">
             El0_Cake</h1>
-        <p id="slogan">
-            Happiness in the belly!</p>
+        <!-- <p id="slogan">
+            Happiness in the belly!</p> -->
+            <blockquote id="slogan">“À mon sens, la gourmandise n'est pas un péché mais plutôt une qualité.” <br>- Catherine DENEUVE</blockquote>
     </div>
 </section>
 <!-- end - Header -->
