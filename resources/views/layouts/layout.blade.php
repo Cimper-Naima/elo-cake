@@ -66,7 +66,7 @@
   <footer id="l-footer" class="text-center py-2">
 <div class="container">
     <p class="mx-0 small">
-    <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>el0_cake 
+    <i class="fa fa-instagram fa-lg" aria-hidden="true"></i><a href="https://www.instagram.com/el0_cake/" target="_blank">el0_cake</a>
     <i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i>(+594)694.27.95.87
         <br>Réalisé par Naïma CIMPER || Kathleen MALIALIN
         <br>Copyright&copy;2020. Tous droits
