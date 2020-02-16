@@ -1,15 +1,15 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 @section('content')
 <div id="body" class="main-color">
     @if(session()->get('success'))
     <div class="alert alert-success">
         {{ session()->get('success') }}
-    </div><br />
+    </div>
     @endif
 
     <div class="text-center">
         <h1> Liste des gourmandises </h1>
-        
+
         <!-- Bouton créer - Admin -->
         @auth
         @if (Auth::user()->role == 1)

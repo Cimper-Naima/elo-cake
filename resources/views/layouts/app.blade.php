@@ -3,6 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CDN - Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -20,25 +24,43 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
+
 <body>
-    <div id="app">
+            <!-- Navbar -->
+<header>
+    <div>
         <nav class="navbar navbar-expand-md navbar-dark bg-black shadow-sm">
             <div class="container">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                            <!-- Brand -->
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('El0_Cake', 'El0_Cake') }}
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
+    
+<div id="nav-content" class="collapse navbar-collapse justify-content-end">    
+                <!-- Left Side Of Navbar -->
+                    <!-- <ul class="navbar-nav mr-auto">
+                    </ul> -->
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+
+                            <!-- Links -->
+<!-- <div id="nav-content" class="collapse navbar-collapse justify-content-end">    -->
+
+<li class="nav-item">
+<a class="nav-link" href="{{ url('/') }}">Accueil</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{{ url('/gourmandises') }}">Gourmandises</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{{ url('/contact') }}">Contact</a>
+</li>
+
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -72,10 +94,30 @@
                 </div>
             </div>
         </nav>
+        </div>
+</header>
 
+        <!-- Content -->
         <main class="py-4">
             @yield('content')
         </main>
-    </div>
+
+
+        <!-- Footer -->
+        <footer id="l-footer" class="text-center py-2">
+<div class="container">
+    <p class="mx-0 small">
+    <i class="fa fa-instagram fa-lg" aria-hidden="true"></i><a href="https://www.instagram.com/el0_cake/" target="_blank">el0_cake</a>
+    <i class="fa fa-whatsapp fa-lg" aria-hidden="true"></i>(+594)694.27.95.87
+        <br>Réalisé par Naïma CIMPER || Kathleen MALIALIN
+        <br>Copyright&copy;2020. Tous droits
+        réservés.
+        <a href="">Mentions légales.</a>
+            </p>
+</div>
+</footer>
+
+                                <!-- Javascript -->
+        <script src="{{ asset('js/app.js') }}" type="text/js"></script>
 </body>
 </html>

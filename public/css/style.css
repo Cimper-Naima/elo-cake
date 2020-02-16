@@ -3,16 +3,16 @@
 .main-color {
     /* background-color: #f5d88c; */
     background-image: linear-gradient(to right top, #d16ba5, #ff6f80, #ff8e4a, #f2bd00, #a8eb12);
-    height: 100vh;
+    /* min-height: 100vh; */
 }
 
-#body {
-    height: 130vh; 
+/* #body {
+    min-height: 100vh; 
      
-}
+} */
 
 #body-register {
-    height: 106.8vh;  
+    min-height: 106.8vh;  
 }
 
 i {
@@ -71,7 +71,7 @@ p {
 #branding {
 
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 15em;
     margin-top: 0em;
     background-image: url(/img/bg.jpg);
@@ -221,9 +221,9 @@ nav {
 
 }
 
-#nav-content a {
+#nav-content  {
 
-    color: #eceff3;
+    color: #f8fafc;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
