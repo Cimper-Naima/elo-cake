@@ -22,7 +22,7 @@ class GourmandiseController extends Controller
     public function index()
     {
         $gourmandises = Gourmandise::with('categorie')->get();
-        return view('gourmandise', compact('gourmandises'));
+        return view('gourmandises/gourmandises', compact('gourmandises'));
     }
 
     /**
@@ -33,7 +33,7 @@ class GourmandiseController extends Controller
     public function create()
     {
         $categories = Categorie::all();
-        return view('create', compact('categories'));
+        return view('gourmandises/create-gourmandises', compact('categories'));
     }
 
     /**
@@ -85,7 +85,7 @@ class GourmandiseController extends Controller
         
         $gourmandises = Gourmandise::find($gourmandises);
         $categories = Categorie::all();
-        return view('edit', compact('gourmandises','categories')); 
+        return view('gourmandises/edit-gourmandises', compact('gourmandises','categories')); 
     }
     /**
      * Update the specified resource in storage.

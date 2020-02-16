@@ -1,26 +1,26 @@
-/* Bases */
-
-.main-color {
-    /* background-color: #f5d88c; */
-    background-image: linear-gradient(to right top, #d16ba5, #ff6f80, #ff8e4a, #f2bd00, #a8eb12);
-    /* min-height: 100vh; */
-}
-
-/* #body {
-    min-height: 100vh; 
-     
+                            /* ---- Bases ---- */
+/* * {
+    border: 1px solid #ff0065 
 } */
 
-#body-register {
-    min-height: 106.8vh;  
+/* Body */
+.main-color {
+
+    background-image: linear-gradient(to right top, #d16ba5, #ff6f80, #ff8e4a, #f2bd00, #a8eb12);
+
 }
 
-i {
-    margin-right:0.5em; 
+.min-height {
+
+    min-height: 80vh; 
+     
 }
+
 /* Title && Text */
 #title {
+
     padding-top: 3em;
+
 }
 
 h2 {
@@ -63,9 +63,7 @@ p {
 
 }
 
-/* -------------- */
-/* welcome.blade */
-/* ------------ */
+        /* -- welcome.blade -- */
 
 /* Header - à remplacer par un logo + underline*/
 #branding {
@@ -106,7 +104,7 @@ p {
 
 }
 
-/* Gourmandises */
+/* Slider */
 #gourmandises {
 
     padding-top: 2em;
@@ -115,21 +113,17 @@ p {
 }
 
 #cakerousel {
+
     border: 1px dashed #ff0065;
     margin-top: 2em;
     margin-bottom: 2em;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
+
 }
 
-/*-------------------- */
-/* end - welcome.blade */
-/*-------------------- */
-
-/*------------------- */
-/* gourmandise.blade */
-/*------------------ */
+        /* -- gourmandise.blade -- */
 
 /* All cards */
 .card {
@@ -176,36 +170,10 @@ p {
 .prix {
     float: right;
 }
-#form-btn {
-    padding: 0em;
-    margin:0em;
-    float:right;
-    border:none;
-    background:none;
-    box-shadow:none;
-}
-/*-------------------- */
-/* end - gourmandise.blade */
-/*-------------------- */
 
-/* ---------- */
-/* home.blade */
-/* ---------- */
+                        /* ---- Layouts ---- */
 
-.jumbotron{
-    background: #fff;
-    margin-top:8em;
-    border-radius: 2px;
-    /* display: inline-block; */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);  
-}
-
-/* ----------------- */
-/* end - home.blade */
-/* --------------- */
-
-/* layout */
+        /* -- app.blade -- */
 
 /* Navbar */
 nav {
@@ -242,6 +210,7 @@ nav {
     color:#fff;
 }
 
+/* Footer */
 #l-footer {
 
     color: #eceff3;
@@ -249,10 +218,25 @@ nav {
 
 }
 
-/* Bordered form */
-#form-plce {
+                        /* ---- Modules ---- */
+
+/* Btn Create, Edit && Delete */
+#form-btn {
+    padding: 0em;
+    margin:0em;
+    float:right;
+    border:none;
+    background:none;
+    box-shadow:none;
+}
+
+/* All forms */
+#form-plce{
     width: 50%;
     margin:auto;
+}
+
+.form-css {
     border: 1px solid #f1f1f1;
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-<div id="body" class="main-color">
+<div class="main-color">
 <h1 id="title" class="justify-content-center text-center">Modifier les gourmandises</h1>
   <div class="card-body">
     @if ($errors->any())
@@ -13,7 +13,7 @@
         </ul>
       </div><br />
     @endif
-    <form id="form-plce" method="post" action="{{ route('gourmandises.update', $gourmandises->id)}}">
+    <form id="form-plce" class="form-css" method="post" action="{{ route('gourmandises.update', $gourmandises->id)}}">
     
     
     <div class="form-group">

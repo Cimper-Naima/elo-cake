@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="main-color">
+<div class="main-color min-height">
 <div class="container">
     <div class="row justify-content-center text-center">
         <div class="col-md-8">

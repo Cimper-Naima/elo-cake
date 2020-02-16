@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div id="body" class="main-color">
+<div class="main-color">
     @if(session()->get('success'))
     <div class="alert alert-success">
         {{ session()->get('success') }}

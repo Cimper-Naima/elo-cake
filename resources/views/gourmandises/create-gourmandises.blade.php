@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
  
-<div id="body" class="main-color">
+<div class="main-color">
   
   <h1 id="title" class="justify-content-center text-center">Ajouter de nouvelles gourmandises</h1>
   <div class="card-body">
@@ -14,12 +14,7 @@
         </ul>
       </div><br />
     @endif
-      <form id="form-plce" method="post" action="{{ route('gourmandises.store') }}">
-          <!-- <div class="form-group">
-              @csrf
-              <label for="category">Catégorie :</label>
-              <input type="text" class="form-control" name="category"/>
-          </div> -->
+      <form id="form-plce" class="form-css" method="post" action="{{ route('gourmandises.store') }}">
           <select name="categorie_id">
                 @foreach($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
