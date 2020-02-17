@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('content')
-<div class="main-color">
+<div class="main-color min-height">
+
 <div class="container">
     <div class="row justify-content-center text-center">
         <div class="col-md-8">
-            <!-- <div class="card">
-                <div class="card-header">{{ __('Inscription') }}</div> -->
+            
                 <h1>{{ __('Inscription') }}</h1>
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+
+                    <form class="form-css form-log-rec" method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -69,7 +69,6 @@
                             </div>
                         </div>
                     </form>
-                </div>
             </div>
         </div>
     </div>

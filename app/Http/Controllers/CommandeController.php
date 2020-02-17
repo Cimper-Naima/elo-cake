@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Gourmandise;
+use App\Commande;
+use App\User;
 use Illuminate\Http\Request;
 
 class CommandeController extends Controller
@@ -12,8 +14,10 @@ class CommandeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('commandes/commandes');
+    { 
+       $commandes = Commande::where('user_id', auth()->user()->id)->with('gourmandises')->get();
+
+        return view('commandes/commandes', compact('commandes'));
     }
 
     /**
@@ -23,8 +27,8 @@ class CommandeController extends Controller
      */
     public function create()
     {
-
-        return view('commandes/create-commandes');
+        $gourmandises = Gourmandise::all();
+        return view('commandes/create-commandes', compact('gourmandises'));
     }
 
     /**
@@ -35,7 +39,31 @@ class CommandeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data_commande = array(
+            "status" => "En cours",
+            "user_id" => auth()->user()->id
+        );
+
+       $commande = Commande::create($data_commande);
+
+        $cake = [];
+        $gourmandises = $request->input('gourmandises_id');
+        $qte = $request->input('gourmandises_qte');
+
+        foreach($gourmandises as $key => $value)
+        {
+             $cakes[] = array(
+                 "gourmandise_id" => $value , 
+                 "quantity" => $qte[$key]);
+        }
+        
+        foreach($cakes as $cake):
+            $gourmandise = Gourmandise::find($cake['gourmandise_id']);
+            $gourmandise->commandes()->attach($commande->id, ['quantity' => $cake['quantity']]);
+        endforeach;
+
+      
+        return redirect('/commandes')->with('success', 'La gourmandise a bien été enregistrée dans la base de données');
     }
 
     /**

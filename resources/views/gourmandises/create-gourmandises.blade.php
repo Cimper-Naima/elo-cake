@@ -2,9 +2,11 @@
 @section('content')
  
 <div class="main-color">
+<div class="container">
+<div class="row justify-content-center">
+        <div class="col-md-8">
+  <h1 class="text-center">Ajouter de nouvelles gourmandises</h1>
   
-  <h1 id="title" class="justify-content-center text-center">Ajouter de nouvelles gourmandises</h1>
-  <div class="card-body">
     @if ($errors->any())
       <div class="alert alert-danger">
         <ul>
@@ -14,7 +16,9 @@
         </ul>
       </div><br />
     @endif
-      <form id="form-plce" class="form-css" method="post" action="{{ route('gourmandises.store') }}">
+    
+
+      <form  class="form-css form-log-rec px-4" method="post" action="{{ route('gourmandises.store') }}">
           <select name="categorie_id">
                 @foreach($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -37,6 +41,8 @@
           <button type="submit" class="btn btn-dark btn-lg btn-block">Créer</button>
 
       </form>
-  </div>
+</div>
+</div>
+</div>
 </div>
 @endsection

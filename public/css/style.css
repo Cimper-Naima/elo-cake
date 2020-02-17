@@ -17,10 +17,9 @@
 }
 
 /* Title && Text */
-#title {
-
-    padding-top: 3em;
-
+.title-css {
+    padding-top:1.5em;
+    margin:0em;
 }
 
 h2 {
@@ -230,15 +229,25 @@ nav {
     box-shadow:none;
 }
 
-/* All forms */
-#form-plce{
-    width: 50%;
-    margin:auto;
-}
-
 .form-css {
+    
+    padding-top: 2.5em;
+    padding-bottom:2.5em;
     border: 1px solid #f1f1f1;
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
+.form-log-rec {
+    margin-bottom:2em;
+}
+
+/* Tableau Historique des commandes */
+#story-cmde {
+    margin-bottom:2em;
+    padding-top: 2.5em;
+    padding-bottom:2.5em;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}

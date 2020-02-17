@@ -1,15 +1,22 @@
 @extends('layouts.app')
 @section('content')
 <div class="main-color">
+<div class="container">
+<div class="row justify-content-center text-center">
+        <div class="col-md-8">
+
+        <h1> Liste des gourmandises </h1>
+
     @if(session()->get('success'))
     <div class="alert alert-success">
         {{ session()->get('success') }}
     </div>
     @endif
-
-    <div class="text-center">
-        <h1> Liste des gourmandises </h1>
-
+        
+<!-- Bouton commander - all users -->
+<div class="text-center">
+          <a href="{{ route('commandes.create')}}"class="btn btn-dark text-white btn-lg">Commander</a>
+</div>
         <!-- Bouton créer - Admin -->
         @auth
         @if (Auth::user()->role == 1)
@@ -20,8 +27,7 @@
         @endif
 
     </div>
-    <div class="container">
-        <div class="row">
+    
             @foreach($gourmandises as $gourmandise)
             <div class="col-12 col-sm-12 col-lg-6 my-lg-4 mb-4">
                 <div class="card text-black bg-warning mb-3">
@@ -66,6 +72,7 @@
             </div>
             @endforeach
         </div>
-
+</div>
+</div>
     </div>
     @endsection
