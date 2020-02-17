@@ -4,6 +4,15 @@
 } */
 
 /* Body */
+.colour-block {
+    /* background-image: linear-gradient(to left top, #06ade2, #36ace5, #4fabe7, #62aae8, #73a9e8, #70b0ee, #6cb8f3, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    /* background-image: linear-gradient(to left top, #06ade2, #059fd6, #0892ca, #0c84bd, #1077b0, #146da5, #17639a, #19598f, #1b4f83, #1b4678, #1b3c6c, #1a3361); */
+    background:#a8eb12;
+    color:#0b0b0b;
+    padding-left: 2.75em;
+    padding-bottom:3em;
+  }
+
 .main-color {
 
     background-image: linear-gradient(to right top, #d16ba5, #ff6f80, #ff8e4a, #f2bd00, #a8eb12);
@@ -20,6 +29,7 @@
 .title-css {
     padding-top:1.5em;
     margin:0em;
+    text-align:center;
 }
 
 h2 {
@@ -47,7 +57,6 @@ h3 {
 
 h4 {
 
-    /* text-align: center; */
     font-weight: bold;
     font-size: 2em;
     text-align:center;
@@ -59,7 +68,7 @@ p {
     font-size: 1.25em;
     line-height: 1.5em;
     text-indent:2em;
-
+    
 }
 
         /* -- welcome.blade -- */
@@ -68,11 +77,11 @@ p {
 #branding {
 
     text-align: center;
-    min-height: 100vh;
-    padding-top: 15em;
+    /* min-height: 100vh; */
+    padding-top: 5em;
     margin-top: 0em;
-    background-image: url(/img/bg.jpg);
-    background-size: cover;
+    /* background-image: url(/img/bg.jpg);
+    background-size: cover; */
 
 }
 
@@ -92,23 +101,38 @@ p {
 /* À propos */
 #a-propos {
 
-    padding-top: 2em;
-    margin-top: 2em;
+    text-align:center;
 
 }
 
 .img-fluid {
 
-    padding-right: 0em;
+    /* padding-right: 0em; */
+    float:right;
 
 }
 
+.scallop-down{
+
+    height:20px;
+    width:100%;
+    background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from(#a8eb12), color-stop(0.49, #a8eb12), color-stop(0.51, #f8fafc), to(#f8fafc));
+  -webkit-background-size: 49px 100%;
+
+  }
+
+  .scallop-up{
+
+    height:20px;
+    width:100%;
+    background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#a8eb12), color-stop(0.49, #a8eb12), color-stop(0.51, #f8fafc), to(#f8fafc));
+  -webkit-background-size: 49px 100%;
+
+  }
+
 /* Slider */
-#gourmandises {
-
-    padding-top: 2em;
-    margin-top: 2em;
-
+#cakerousel-block {
+    padding-left: 2.75em;
 }
 
 #cakerousel {
@@ -129,7 +153,6 @@ p {
 
     background: #fff;
     border-radius: 2px;
-    /* display: inline-block; */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 
@@ -146,12 +169,13 @@ p {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom:0em;
-    padding-top:1em;
+    /* padding-top:1em; */
 
 }
 
 .card-subtitle {
-    padding-top:0.2em;
+    /* padding-top:0.2em; */
+    margin-top:0.7em;
 }
 
 .card-text {

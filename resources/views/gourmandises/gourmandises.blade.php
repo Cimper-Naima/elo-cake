@@ -59,7 +59,7 @@
                                 <p class="card-text">{{$gourmandise->description}}</p>
                             </div>
 
-                            <div class="col-4 my-auto">
+                            <div class="col-4 my-auto py-2">
 
                                 <img class="card-img" src="{{ asset('img/cupcake.png') }}" alt="Card image cap">
                                 <p class="prix">{{$gourmandise->prix}}€ / unité</p>
