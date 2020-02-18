@@ -5,7 +5,7 @@
 <section id="branding">
     <div class="col-12 col-sm-12 col-lg-12 ">
     <img id="logo" src="{{ asset('img/logo-el0cake(quadri).png') }}" alt="dessin-cupcake"/>    
-            <blockquote id="quote">“À mon sens, la gourmandise n'est pas un péché mais plutôt une qualité.” <br>- Catherine DENEUVE</blockquote>
+            <!-- <blockquote id="quote">Happiness in the belly !</blockquote> -->
     </div>
 </section>
 <!-- end - Header -->
@@ -35,22 +35,31 @@
 <section>
 <div id="cakerousel-block" class="container-fluid">
 <h1 class="title-css"> Quelques gourmandises...</h1>
-<p id="a-propos"> Vous pouvez retrouver toutes ces gourmandises dans l'onglet "Gourmandises".</p>
+<blockquote id="quote" class="text-center">“À mon sens, la gourmandise n'est pas un péché mais plutôt une qualité.” - Catherine DENEUVE</blockquote>
+
 <div id="cakerousel" class="carousel slide bg-inverse " data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#cakerousel" data-slide-to="0" class="active"></li>
     <li data-target="#cakerousel" data-slide-to="1"></li>
     <li data-target="#cakerousel" data-slide-to="2"></li>
+    <li data-target="#cakerousel" data-slide-to="3"></li>
+    <li data-target="#cakerousel" data-slide-to="4"></li>
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="{{asset('img/cup.jpg')}}" alt="Cupcakes bleus">
+      <img class="d-block w-100" src="{{asset('img/img1.jpg')}}" alt="Cupcakes bleus">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{asset('img/cake.jpg')}}" alt="Cupcakes blancs">
+      <img class="d-block w-100" src="{{asset('img/img2.jpg')}}" alt="Cupcakes blancs">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="{{asset('img/event.jpg')}}" alt="Gâteau d'anniversaire">
+      <img class="d-block w-100" src="{{asset('img/img4.jpg')}}" alt="Gâteau d'anniversaire">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{asset('img/img5.jpg')}}" alt="Gâteau d'anniversaire">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{{asset('img/img6.jpg')}}" alt="Gâteau d'anniversaire">
     </div>
   </div>
   <a class="carousel-control-prev" href="#cakerousel" role="button" data-slide="prev">
@@ -67,4 +76,15 @@
 </div>
 </section>
 <!-- end - Gourmandises -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+   $(function(){
+      setInterval(function(){
+         $(".slideshow ul").animate({marginLeft:-350},800,function(){
+            $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
+         })
+      }, 3500);
+   });
+</script>
 @endsection
