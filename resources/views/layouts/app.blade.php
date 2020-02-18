@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
-<body>
+<body id="green-life">
     <!-- Navbar -->
     <header>
         <div>
