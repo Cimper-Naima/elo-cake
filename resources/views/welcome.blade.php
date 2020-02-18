@@ -3,12 +3,9 @@
 
 <!-- Header -->
 <section id="branding">
-    <div class="col-sm-12">
-        <h1 id="logo" class="title-css">
-            El0_Cake</h1>
-        <!-- <p id="slogan">
-            Happiness in the belly!</p> -->
-            <blockquote id="slogan">“À mon sens, la gourmandise n'est pas un péché mais plutôt une qualité.” <br>- Catherine DENEUVE</blockquote>
+    <div class="col-12 col-sm-12 col-lg-12 ">
+    <img id="logo" src="{{ asset('img/logo-el0cake(quadri).png') }}" alt="dessin-cupcake"/>    
+            <blockquote id="quote">“À mon sens, la gourmandise n'est pas un péché mais plutôt une qualité.” <br>- Catherine DENEUVE</blockquote>
     </div>
 </section>
 <!-- end - Header -->
@@ -19,7 +16,7 @@
 <div class="colour-block">
 <div class="container-fluid">
 <div class="row">
-  <div class="col-sm-8">
+  <div class="col-8 col-sm-8 col-lg-8">
 <h1 class="title-css text-center">Qui sommes-nous ?</h1>
   <p id="a-propos">Cupcake ipsum dolor sit amet gingerbread sugar plum. Pie tiramisu candy canes gingerbread cotton candy carrot cake pudding muffin. Toffee I love cake sugar plum chocolate. Macaroon I love cheesecake chocolate marshmallow caramels I love carrot cake. I love powder tootsie roll topping bear claw dragée. Gingerbread I love cake sesame snaps bonbon wafer bear claw lollipop. Soufflé gummi bears wafer bonbon jujubes icing pie macaroon cupcake. Ice cream topping macaroon tart muffin sugar plum. Sweet roll gummi bears liquorice muffin sugar plum icing topping cheesecake jelly beans. Liquorice sweet sweet roll jujubes bonbon sesame snaps.
   </p>

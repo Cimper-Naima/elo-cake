@@ -6,7 +6,7 @@
 <div class="row justify-content-center text-center">
         <div class="col-md-12">
 
-<h1>Formulaire de commande</h1>
+<h1 class="other-title-css">Formulaire de commande</h1>
 
 <div>
           <a href="{{ route('commandes.index')}}" class="btn btn-outline-dark text-white btn-lg">Mes commandes</a>
