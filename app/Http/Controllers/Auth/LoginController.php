@@ -46,6 +46,6 @@ class LoginController extends Controller
             return redirect('/gourmandises');
         }
 
-        return redirect('/home');
+        return redirect('/commandes');
     }
 }

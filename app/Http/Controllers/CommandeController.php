@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class CommandeController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -16,7 +22,6 @@ class CommandeController extends Controller
     public function index()
     { 
        $commandes = Commande::where('user_id', auth()->user()->id)->with('gourmandises')->get();
-
         return view('commandes/commandes', compact('commandes'));
     }
 

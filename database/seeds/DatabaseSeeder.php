@@ -16,7 +16,6 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             CategoriesTableSeeder::class,
             GourmandisesTableSeeder::class,
-            CommandesTableSeeder::class,
         ]);
     }
 }
