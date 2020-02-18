@@ -26,8 +26,18 @@
 }
 
 /* Title && Text */
+#icone {
+    margin-right:0.5em;
+}
 .title-css {
     padding-top:1.5em;
+    margin:0em;
+    text-align:center;
+}
+
+.other-title-css {
+    padding-top:4.5em;
+    padding-bottom:1em;
     margin:0em;
     text-align:center;
 }
@@ -73,28 +83,28 @@ p {
 
         /* -- welcome.blade -- */
 
-/* Header - à remplacer par un logo + underline*/
+/* Header */
 #branding {
 
     text-align: center;
     /* min-height: 100vh; */
     padding-top: 5em;
     margin-top: 0em;
-    /* background-image: url(/img/bg.jpg);
-    background-size: cover; */
 
 }
 
 #logo {
 
-    font-size: 7em;
-    padding-top: 0em;
+    width: 20em;
+	height: auto;
 
 }
 
-#slogan {
+#quote {
 
     font-size: 2em;
+    margin-bottom:2em;
+    margin-top:2em;
 
 }
 

@@ -5,7 +5,7 @@
 <div class="row justify-content-center text-center">
         <div class="col-md-8">
 
-        <h1> Liste des gourmandises </h1>
+        <h1 class="other-title-css"> Liste des gourmandises </h1>
 
     @if(session()->get('success'))
     <div class="alert alert-success">

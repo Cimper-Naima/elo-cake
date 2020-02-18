@@ -6,7 +6,7 @@
 <div class="row justify-content-center">
         <div class="col-md-8">
 
-<h1 class="text-center">Modifier les gourmandises</h1>
+<h1 class="other-title-css text-center">Modifier les gourmandises</h1>
   
     @if ($errors->any())
       <div class="alert alert-danger">
