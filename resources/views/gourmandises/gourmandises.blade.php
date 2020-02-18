@@ -14,15 +14,26 @@
     @endif
         
 <!-- Bouton commander - all users -->
+@auth
+        @if (Auth::user()->role == 2 )
 <div class="text-center">
           <a href="{{ route('commandes.create')}}"class="btn btn-dark text-white btn-lg">Commander</a>
 </div>
+@endif
+@endif
+
+@guest
+<div class="text-center">
+          <a href="{{ route('commandes.create')}}"class="btn btn-dark text-white btn-lg">Commander</a>
+</div>
+@endif
         <!-- Bouton créer - Admin -->
         @auth
         @if (Auth::user()->role == 1)
         <a href="{{ route('gourmandises.create')}}" class="btn btn-primary"><i class="fa fa-plus"
                 aria-hidden="true"></i>Créer une nouvelle gourmandise
         </a>
+        
         @endif
         @endif
 

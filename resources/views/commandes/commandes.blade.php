@@ -28,7 +28,7 @@
 
     <!-- Ligne 2 - Récapitulatif des commandes  -->
     <tbody>
-    @foreach($commandes as $commande)
+    @foreach($commandes ?? '' as $commande)
     <tr>
         <td>{{ $commande->id }}</td>
         <td>
