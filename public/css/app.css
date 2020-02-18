@@ -1,23 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 
-/* #container {
-    width: 400px;
-    margin: 0 auto;
-    margin-top: 10%;
-} */
-
-/* Bordered form */
-form {
-    width: 100%;
-    padding: 30px;
-    padding-top: 3.5em;
-    width: 85%;
-    margin-left: 5em;
-    border: 1px solid #f1f1f1;
-    background: #fff;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -109,10 +91,9 @@ h3,
 h4,
 h5,
 h6 {
-    /* margin-top: 1.5em; */
-    /* margin-bottom: 0.5rem; */
-    padding-top:1.5em;
-    margin:0em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5rem;
+    
 
 }
 

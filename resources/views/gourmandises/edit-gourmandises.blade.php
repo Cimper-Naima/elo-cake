@@ -1,9 +1,13 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 @section('content')
 
-<div id="body" class="main-color">
-<h1 id="title" class="justify-content-center text-center">Modifier les gourmandises</h1>
-  <div class="card-body">
+<div class="main-color">
+  <div class="container">
+<div class="row justify-content-center">
+        <div class="col-md-8">
+
+<h1 class="text-center">Modifier les gourmandises</h1>
+  
     @if ($errors->any())
       <div class="alert alert-danger">
         <ul>
@@ -13,7 +17,8 @@
         </ul>
       </div><br />
     @endif
-    <form id="form-plce" method="post" action="{{ route('gourmandises.update', $gourmandises->id)}}">
+
+    <form class="form-css form-log-rec px-4" method="post" action="{{ route('gourmandises.update', $gourmandises->id)}}">
     
     
     <div class="form-group">
@@ -42,6 +47,8 @@
           </div>
           <button type="submit" class="btn btn-dark btn-lg btn-block">Modifier</button>
       </form>
-  </div>
+</div>
+</div>
+</div>
 </div>
 @endsection

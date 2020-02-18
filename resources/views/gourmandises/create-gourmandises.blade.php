@@ -1,10 +1,12 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 @section('content')
  
-<div id="body" class="main-color">
+<div class="main-color">
+<div class="container">
+<div class="row justify-content-center">
+        <div class="col-md-8">
+  <h1 class="text-center">Ajouter de nouvelles gourmandises</h1>
   
-  <h1 id="title" class="justify-content-center text-center">Ajouter de nouvelles gourmandises</h1>
-  <div class="card-body">
     @if ($errors->any())
       <div class="alert alert-danger">
         <ul>
@@ -14,12 +16,9 @@
         </ul>
       </div><br />
     @endif
-      <form id="form-plce" method="post" action="{{ route('gourmandises.store') }}">
-          <!-- <div class="form-group">
-              @csrf
-              <label for="category">Catégorie :</label>
-              <input type="text" class="form-control" name="category"/>
-          </div> -->
+    
+
+      <form  class="form-css form-log-rec px-4" method="post" action="{{ route('gourmandises.store') }}">
           <select name="categorie_id">
                 @foreach($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -42,6 +41,8 @@
           <button type="submit" class="btn btn-dark btn-lg btn-block">Créer</button>
 
       </form>
-  </div>
+</div>
+</div>
+</div>
 </div>
 @endsection

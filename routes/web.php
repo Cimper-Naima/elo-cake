@@ -17,14 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('gourmandises', 'GourmandiseController');
-
-Route::get('/gourmandise', function () {
-    return view('gourmandise');
-});
-
-// Route::get('/layout', function () {
-//     return view('layout');
-// });
+Route::resource('commandes', 'CommandeController');
 

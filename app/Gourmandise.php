@@ -14,4 +14,9 @@ class Gourmandise extends Model
         return $this->belongsTo(Categorie::class); 
     }
 
+    public function commandes()
+    {
+        return $this->belongsToMany('App\Commande');
+    }
+
 }

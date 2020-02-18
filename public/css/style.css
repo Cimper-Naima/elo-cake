@@ -1,26 +1,35 @@
-/* Bases */
+                            /* ---- Bases ---- */
+/* * {
+    border: 1px solid #ff0065 
+} */
+
+/* Body */
+.colour-block {
+    /* background-image: linear-gradient(to left top, #06ade2, #36ace5, #4fabe7, #62aae8, #73a9e8, #70b0ee, #6cb8f3, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
+    /* background-image: linear-gradient(to left top, #06ade2, #059fd6, #0892ca, #0c84bd, #1077b0, #146da5, #17639a, #19598f, #1b4f83, #1b4678, #1b3c6c, #1a3361); */
+    background:#a8eb12;
+    color:#0b0b0b;
+    padding-left: 2.75em;
+    padding-bottom:3em;
+  }
 
 .main-color {
-    /* background-color: #f5d88c; */
+
     background-image: linear-gradient(to right top, #d16ba5, #ff6f80, #ff8e4a, #f2bd00, #a8eb12);
-    height: 100vh;
+
 }
 
-#body {
-    height: 130vh; 
+.min-height {
+
+    min-height: 80vh; 
      
 }
 
-#body-register {
-    height: 106.8vh;  
-}
-
-i {
-    margin-right:0.5em; 
-}
 /* Title && Text */
-#title {
-    padding-top: 3em;
+.title-css {
+    padding-top:1.5em;
+    margin:0em;
+    text-align:center;
 }
 
 h2 {
@@ -48,7 +57,6 @@ h3 {
 
 h4 {
 
-    /* text-align: center; */
     font-weight: bold;
     font-size: 2em;
     text-align:center;
@@ -60,22 +68,20 @@ p {
     font-size: 1.25em;
     line-height: 1.5em;
     text-indent:2em;
-
+    
 }
 
-/* -------------- */
-/* welcome.blade */
-/* ------------ */
+        /* -- welcome.blade -- */
 
 /* Header - à remplacer par un logo + underline*/
 #branding {
 
     text-align: center;
-    height: 100vh;
-    padding-top: 15em;
+    /* min-height: 100vh; */
+    padding-top: 5em;
     margin-top: 0em;
-    background-image: url(/img/bg.jpg);
-    background-size: cover;
+    /* background-image: url(/img/bg.jpg);
+    background-size: cover; */
 
 }
 
@@ -95,48 +101,58 @@ p {
 /* À propos */
 #a-propos {
 
-    padding-top: 2em;
-    margin-top: 2em;
+    text-align:center;
 
 }
 
 .img-fluid {
 
-    padding-right: 0em;
+    /* padding-right: 0em; */
+    float:right;
 
 }
 
-/* Gourmandises */
-#gourmandises {
+.scallop-down{
 
-    padding-top: 2em;
-    margin-top: 2em;
+    height:20px;
+    width:100%;
+    background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from(#a8eb12), color-stop(0.49, #a8eb12), color-stop(0.51, #f8fafc), to(#f8fafc));
+  -webkit-background-size: 49px 100%;
 
+  }
+
+  .scallop-up{
+
+    height:20px;
+    width:100%;
+    background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#a8eb12), color-stop(0.49, #a8eb12), color-stop(0.51, #f8fafc), to(#f8fafc));
+  -webkit-background-size: 49px 100%;
+
+  }
+
+/* Slider */
+#cakerousel-block {
+    padding-left: 2.75em;
 }
 
 #cakerousel {
+
     border: 1px dashed #ff0065;
     margin-top: 2em;
     margin-bottom: 2em;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
+
 }
 
-/*-------------------- */
-/* end - welcome.blade */
-/*-------------------- */
-
-/*------------------- */
-/* gourmandise.blade */
-/*------------------ */
+        /* -- gourmandise.blade -- */
 
 /* All cards */
 .card {
 
     background: #fff;
     border-radius: 2px;
-    /* display: inline-block; */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
 
@@ -153,12 +169,13 @@ p {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom:0em;
-    padding-top:1em;
+    /* padding-top:1em; */
 
 }
 
 .card-subtitle {
-    padding-top:0.2em;
+    /* padding-top:0.2em; */
+    margin-top:0.7em;
 }
 
 .card-text {
@@ -176,36 +193,10 @@ p {
 .prix {
     float: right;
 }
-#form-btn {
-    padding: 0em;
-    margin:0em;
-    float:right;
-    border:none;
-    background:none;
-    box-shadow:none;
-}
-/*-------------------- */
-/* end - gourmandise.blade */
-/*-------------------- */
 
-/* ---------- */
-/* home.blade */
-/* ---------- */
+                        /* ---- Layouts ---- */
 
-.jumbotron{
-    background: #fff;
-    margin-top:8em;
-    border-radius: 2px;
-    /* display: inline-block; */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);  
-}
-
-/* ----------------- */
-/* end - home.blade */
-/* --------------- */
-
-/* layout */
+        /* -- app.blade -- */
 
 /* Navbar */
 nav {
@@ -221,9 +212,9 @@ nav {
 
 }
 
-#nav-content a {
+#nav-content  {
 
-    color: #eceff3;
+    color: #f8fafc;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
@@ -242,6 +233,7 @@ nav {
     color:#fff;
 }
 
+/* Footer */
 #l-footer {
 
     color: #eceff3;
@@ -249,12 +241,37 @@ nav {
 
 }
 
-/* Bordered form */
-#form-plce {
-    width: 50%;
-    margin:auto;
+                        /* ---- Modules ---- */
+
+/* Btn Create, Edit && Delete */
+#form-btn {
+    padding: 0em;
+    margin:0em;
+    float:right;
+    border:none;
+    background:none;
+    box-shadow:none;
+}
+
+.form-css {
+    
+    padding-top: 2.5em;
+    padding-bottom:2.5em;
     border: 1px solid #f1f1f1;
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
+.form-log-rec {
+    margin-bottom:2em;
+}
+
+/* Tableau Historique des commandes */
+#story-cmde {
+    margin-bottom:2em;
+    padding-top: 2.5em;
+    padding-bottom:2.5em;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}

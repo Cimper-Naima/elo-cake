@@ -1,27 +1,44 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 @section('content')
-<div id="body" class="main-color">
+<div class="main-color">
+<div class="container">
+<div class="row justify-content-center text-center">
+        <div class="col-md-8">
+
+        <h1> Liste des gourmandises </h1>
+
     @if(session()->get('success'))
     <div class="alert alert-success">
         {{ session()->get('success') }}
-    </div><br />
+    </div>
     @endif
-
-    <div class="text-center">
-        <h1> Liste des gourmandises </h1>
         
+<!-- Bouton commander - all users -->
+@auth
+        @if (Auth::user()->role == 2 )
+<div class="text-center">
+          <a href="{{ route('commandes.create')}}"class="btn btn-dark text-white btn-lg">Commander</a>
+</div>
+@endif
+@endif
+
+@guest
+<div class="text-center">
+          <a href="{{ route('commandes.create')}}"class="btn btn-dark text-white btn-lg">Commander</a>
+</div>
+@endif
         <!-- Bouton créer - Admin -->
         @auth
         @if (Auth::user()->role == 1)
         <a href="{{ route('gourmandises.create')}}" class="btn btn-primary"><i class="fa fa-plus"
                 aria-hidden="true"></i>Créer une nouvelle gourmandise
         </a>
+        
         @endif
         @endif
 
     </div>
-    <div class="container">
-        <div class="row">
+    
             @foreach($gourmandises as $gourmandise)
             <div class="col-12 col-sm-12 col-lg-6 my-lg-4 mb-4">
                 <div class="card text-black bg-warning mb-3">
@@ -53,7 +70,7 @@
                                 <p class="card-text">{{$gourmandise->description}}</p>
                             </div>
 
-                            <div class="col-4 my-auto">
+                            <div class="col-4 my-auto py-2">
 
                                 <img class="card-img" src="{{ asset('img/cupcake.png') }}" alt="Card image cap">
                                 <p class="prix">{{$gourmandise->prix}}€ / unité</p>
@@ -66,6 +83,7 @@
             </div>
             @endforeach
         </div>
-
+</div>
+</div>
     </div>
     @endsection
