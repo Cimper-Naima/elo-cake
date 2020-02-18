@@ -15,7 +15,8 @@
 
 </div>
                         <!-- Formulaire -->
-<form class="form-css form-log-rec" method="post" action="{{ route('commandes.store') }}">
+                       
+<form  class="form-css form-log-rec" method="post" action="{{ route('commandes.store') }}">
 @csrf
 <table class="table table-striped table-bordered table-hover table-responsive-sm" summary="Tableau des gourmandises">
 
@@ -49,7 +50,7 @@
 </table>
 
 <div class="text-center">
-          <button type="submit" class="btn btn-lg btn-outline-dark btn-lg">Commander</button>
+          <button type="submit" onclick="rain()" class="btn btn-lg btn-outline-dark btn-lg">Commander</button>
 </div>
 </form>
 </div>
