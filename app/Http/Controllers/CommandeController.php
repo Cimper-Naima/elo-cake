@@ -61,7 +61,7 @@ class CommandeController extends Controller
                  "gourmandise_id" => $value , 
                  "quantity" => $qte[$key]);
         }
-        // Envoyé sur la base de donnée
+        // Envoyé sur la base de donnée liée a la commande
         foreach($cakes as $cake):
             $gourmandise = Gourmandise::find($cake['gourmandise_id']);
             $gourmandise->commandes()->attach($commande->id, ['quantity' => $cake['quantity']]);
