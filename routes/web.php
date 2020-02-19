@@ -21,3 +21,7 @@ Auth::routes();
 Route::resource('gourmandises', 'GourmandiseController');
 Route::resource('commandes', 'CommandeController');
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
