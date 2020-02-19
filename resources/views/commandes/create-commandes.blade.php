@@ -6,16 +6,17 @@
 <div class="row justify-content-center text-center">
         <div class="col-md-12">
 
-<h1>Formulaire de commande</h1>
+<h1 class="other-title-css">Formulaire de commande</h1>
 
 <div>
-          <a href="{{ route('commandes.index')}}" class="btn btn-outline-dark text-white btn-lg">Mes commandes</a>
+          <a href="{{ route('commandes.index')}}" class="btn btn-outline-dark text-black btn-lg">Mes commandes</a>
 
           <a href="{{ route('commandes.create')}}" class="btn btn-dark text-white btn-lg">Commander</a>
 
 </div>
                         <!-- Formulaire -->
-<form class="form-css form-log-rec" method="post" action="{{ route('commandes.store') }}">
+                       
+<form  class="form-css form-log-rec" method="post" action="{{ route('commandes.store') }}">
 @csrf
 <table class="table table-striped table-bordered table-hover table-responsive-sm" summary="Tableau des gourmandises">
 
@@ -47,7 +48,7 @@
 </tbody>
 
 </table>
-
+<p id="warning" class="text-left"> Attention : N'oubliez pas de cocher la gourmandise de votre choix avant de choisir la quantité ! </p>
 <div class="text-center">
           <button type="submit" class="btn btn-lg btn-outline-dark btn-lg">Commander</button>
 </div>

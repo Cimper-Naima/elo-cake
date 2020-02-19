@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('content')
-<div class="main-color">
+<div class="main-color min-height">
 
 <div class="container">
 <div class="row justify-content-center text-center">
         <div class="col-md-12">
 
-<h1>Historique des commandes</h1>
+<h1 class="other-title-css">Historique des commandes</h1>
 
 <div>
           <a href="{{ route('commandes.index')}}" class="btn btn-dark text-white btn-lg">Mes commandes</a>

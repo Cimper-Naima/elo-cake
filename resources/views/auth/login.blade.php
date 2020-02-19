@@ -5,8 +5,8 @@
 <div class="container">
 <div class="row justify-content-center text-center">
         <div class="col-md-8">
-<h1>{{ __('Connexion') }}</h1>
-                    <form class="form-css form-log-rec" method="POST" action="{{ route('login') }}">
+<h1 class="other-title-css">{{ __('Connexion') }}</h1>
+                    <form id="log-ster" class="form-css form-log-rec" method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">

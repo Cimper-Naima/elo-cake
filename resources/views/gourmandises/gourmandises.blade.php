@@ -5,7 +5,7 @@
 <div class="row justify-content-center text-center">
         <div class="col-md-8">
 
-        <h1> Liste des gourmandises </h1>
+        <h1 class="other-title-css"> Liste des gourmandises </h1>
 
     @if(session()->get('success'))
     <div class="alert alert-success">
@@ -41,7 +41,7 @@
     
             @foreach($gourmandises as $gourmandise)
             <div class="col-12 col-sm-12 col-lg-6 my-lg-4 mb-4">
-                <div class="card text-black bg-warning mb-3">
+                <div class="card text-black bg-light mb-3">
 
                     <div class="card-body">
                         <div class="row">
@@ -62,8 +62,8 @@
                             @endif
                         </div>
 
-                        <h3 class="card-title">{{$gourmandise->categorie->name}}</h3>
-                        <h4 class="card-subtitle">{{$gourmandise->name}}</h4>
+                        <h2 class="card-title">{{$gourmandise->categorie->name}}</h2>
+                        <h3 class="card-subtitle">{{$gourmandise->name}}</h3>
 
                         <div class="row">
                             <div class="col-8">

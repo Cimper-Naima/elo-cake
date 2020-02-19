@@ -14,11 +14,13 @@ class CheckRole
      * @param  \Closure  $next
      * @return mixed
      */
+
+    // Sécurité admin, edit
     public function handle($request, Closure $next)
     {
       if(Auth::user() == null || Auth::user()->role != 1){
 
-        return redirect('welcome'); 
+        return redirect('/'); 
 
     }
 

@@ -6,9 +6,9 @@
     <div class="row justify-content-center text-center">
         <div class="col-md-8">
             
-                <h1>{{ __('Inscription') }}</h1>
+                <h1 class="other-title-css">{{ __('Inscription') }}</h1>
 
-                    <form class="form-css form-log-rec" method="POST" action="{{ route('register') }}">
+                    <form id="log-ster" class="form-css form-log-rec" method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">

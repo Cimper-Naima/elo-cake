@@ -1,12 +1,14 @@
                             /* ---- Bases ---- */
-/* * {
-    border: 1px solid #ff0065 
-} */
 
 /* Body */
+#green-life {
+
+    background-color:#c9f46a; 
+
+}
+
 .colour-block {
-    /* background-image: linear-gradient(to left top, #06ade2, #36ace5, #4fabe7, #62aae8, #73a9e8, #70b0ee, #6cb8f3, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1); */
-    /* background-image: linear-gradient(to left top, #06ade2, #059fd6, #0892ca, #0c84bd, #1077b0, #146da5, #17639a, #19598f, #1b4f83, #1b4678, #1b3c6c, #1a3361); */
+
     background:#a8eb12;
     color:#0b0b0b;
     padding-left: 2.75em;
@@ -15,7 +17,7 @@
 
 .main-color {
 
-    background-image: linear-gradient(to right top, #d16ba5, #ff6f80, #ff8e4a, #f2bd00, #a8eb12);
+    background-image: linear-gradient(to left top, #a8eb12, #afed2d, #b5ef3e, #bbf04d, #c1f25a, #baf05d, #b2ee61, #abec64, #93e661, #78df60, #59d960, #2cd261);
 
 }
 
@@ -26,36 +28,57 @@
 }
 
 /* Title && Text */
+#icone {
+    /* margin-top:1em;
+    margin-right:0.5em; */
+    text-align:center;
+    padding-top: 2em;
+}
+
+#navicone {
+    color:#ffffff;
+}
+
+#title-contact {
+    margin-top:2em;
+}
+
 .title-css {
     padding-top:1.5em;
     margin:0em;
     text-align:center;
+    font-family: 'Lobster', cursive;
+}
+
+.other-title-css {
+    padding-top:2.5em;
+    padding-bottom:1em;
+    margin:0em;
+    text-align:center;
+    font-family: 'Lobster', cursive;
+    font-size:3.75em; 
+}
+#titre-icone{
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.insta{
+    padding: 2em;
+    text-align: center;
+}
+#icone-insta{color: black;
 }
 
 h2 {
 
     text-transform: uppercase;
-    text-align: center;
-    font-family:'Knockout', Raleway;
-    font-size: 3em;
-    letter-spacing: 0.4em;
-    padding-top: 1.2em;
-    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    font-family: 'Cuprum', sans-serif;
 
 }
 
 h3 {
-
-    text-transform: uppercase;
-    /* font-weight: bold;
-    font-size: 1.25em; */
-    font-size: 1.2em;
-    /* padding: 0.2em; */
-    margin-bottom: 2em;
-
-}
-
-h4 {
 
     font-weight: bold;
     font-size: 2em;
@@ -67,34 +90,42 @@ p {
 
     font-size: 1.25em;
     line-height: 1.5em;
-    text-indent:2em;
     
 }
 
+#txt-cntct {
+    font-family: 'Cuprum', sans-serif;
+    font-size : 2em; 
+}
+/* 
+#finder {
+    margin-top:1.5em;
+} */
         /* -- welcome.blade -- */
 
-/* Header - à remplacer par un logo + underline*/
+/* Header */
 #branding {
 
     text-align: center;
     /* min-height: 100vh; */
     padding-top: 5em;
     margin-top: 0em;
-    /* background-image: url(/img/bg.jpg);
-    background-size: cover; */
-
+    background-color:#c9f46a;
 }
 
 #logo {
 
-    font-size: 7em;
-    padding-top: 0em;
+    width: 20em;
+	height: auto;
 
 }
 
-#slogan {
+#quote {
 
-    font-size: 2em;
+    font-size: 2.2em;
+    margin-bottom:2em;
+    margin-top:2em;
+    font-family: 'Cuprum', sans-serif;
 
 }
 
@@ -102,6 +133,8 @@ p {
 #a-propos {
 
     text-align:center;
+    font-family: 'Cuprum', sans-serif;
+    font-size:1.5em;
 
 }
 
@@ -116,7 +149,7 @@ p {
 
     height:20px;
     width:100%;
-    background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from(#a8eb12), color-stop(0.49, #a8eb12), color-stop(0.51, #f8fafc), to(#f8fafc));
+    background: -webkit-gradient(radial, 50% 0, 10, 50% 0, 40, from(#a8eb12), color-stop(0.49, #a8eb12), color-stop(0.51, #c9f46a), to(#c9f46a));
   -webkit-background-size: 49px 100%;
 
   }
@@ -125,8 +158,9 @@ p {
 
     height:20px;
     width:100%;
-    background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#a8eb12), color-stop(0.49, #a8eb12), color-stop(0.51, #f8fafc), to(#f8fafc));
+    background: -webkit-gradient(radial, 50% 100%, 10, 50% 100%, 40, from(#a8eb12), color-stop(0.49, #a8eb12), color-stop(0.51, #c9f46a), to(#c9f46a));
   -webkit-background-size: 49px 100%;
+  margin-top:2em;
 
   }
 
@@ -137,7 +171,7 @@ p {
 
 #cakerousel {
 
-    border: 1px dashed #ff0065;
+    /* border: 1px dashed #ff0065; */
     margin-top: 2em;
     margin-bottom: 2em;
     margin-left: auto;
@@ -169,12 +203,10 @@ p {
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom:0em;
-    /* padding-top:1em; */
 
 }
 
 .card-subtitle {
-    /* padding-top:0.2em; */
     margin-top:0.7em;
 }
 
@@ -204,6 +236,10 @@ nav {
     background-color: #000000;
     border-bottom: 1px solid #0b0b0b;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.19), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.navbar-brand {
+    padding-left:0em;
 }
 
 .navbar-collapse.in {
@@ -255,7 +291,6 @@ nav {
 
 .form-css {
     
-    padding-top: 2.5em;
     padding-bottom:2.5em;
     border: 1px solid #f1f1f1;
     background: #fff;
@@ -266,6 +301,9 @@ nav {
     margin-bottom:2em;
 }
 
+#log-ster {
+    padding-top:2em;
+}
 /* Tableau Historique des commandes */
 #story-cmde {
     margin-bottom:2em;
@@ -274,4 +312,11 @@ nav {
     border: 1px solid #f1f1f1;
     background: #fff;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* Formulaire de commandes */
+
+#warning{
+
+    font-weight:bold;
 }
