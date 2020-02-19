@@ -5,7 +5,6 @@
 <section id="branding">
     <div class="col-12 col-sm-12 col-lg-12 ">
     <img id="logo" src="{{ asset('img/logo-el0cake(quadri).png') }}" alt="dessin-cupcake"/>    
-            <!-- <blockquote id="quote">Happiness in the belly !</blockquote> -->
     </div>
 </section>
 <!-- end - Header -->
@@ -76,15 +75,4 @@
 </div>
 </section>
 <!-- end - Gourmandises -->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
- 
-<script type="text/javascript">
-   $(function(){
-      setInterval(function(){
-         $(".slideshow ul").animate({marginLeft:-350},800,function(){
-            $(this).css({marginLeft:0}).find("li:last").after($(this).find("li:first"));
-         })
-      }, 3500);
-   });
-</script>
 @endsection

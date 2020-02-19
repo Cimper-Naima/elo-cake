@@ -17,7 +17,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/script.js') }}"defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -37,13 +36,17 @@
                 <div class="container">
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        data-target="#nav-content" 
+                        aria-controls="nav-content"
                         aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+
                     <!-- Brand -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('El0_Cake', 'El0_Cake') }}
+                    <a class="navbar-brand" href="#"><i id="navicone" class="fa fa-whatsapp" aria-hidden="true"></i>(+594)694.27.95.87
+                    </a>
+
+                    <a class="navbar-brand" href="#"><i id="navicone" class="fa fa-clock-o" aria-hidden="true"></i>Du lun au ven de 12h à 18h|Sam de 9h à 14h
                     </a>
 
                     <div id="nav-content" class="collapse navbar-collapse justify-content-end">
@@ -125,5 +128,7 @@
         </div>
     </footer>
 </body>
+
+
 
 </html>
