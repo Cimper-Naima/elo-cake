@@ -46,9 +46,6 @@
                     <a class="navbar-brand" href="#"><i id="navicone" class="fa fa-whatsapp" aria-hidden="true"></i>(+594)694.27.95.87
                     </a>
 
-                    <a class="navbar-brand" href="#"><i id="navicone" class="fa fa-clock-o" aria-hidden="true"></i>Du lun au ven de 12h à 18h|Sam de 9h à 14h
-                    </a>
-
                     <div id="nav-content" class="collapse navbar-collapse justify-content-end">
                         <!-- Left Side Of Navbar -->
                         <!-- <ul class="navbar-nav mr-auto">
