@@ -50,7 +50,7 @@
 </table>
 
 <div class="text-center">
-          <button type="submit" onclick="rain()" class="btn btn-lg btn-outline-dark btn-lg">Commander</button>
+          <button type="submit" class="btn btn-lg btn-outline-dark btn-lg">Commander</button>
 </div>
 </form>
 </div>

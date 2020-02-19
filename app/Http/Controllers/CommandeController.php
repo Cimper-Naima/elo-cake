@@ -48,20 +48,20 @@ class CommandeController extends Controller
             "status" => "En cours",
             "user_id" => auth()->user()->id
         );
+        // Créer la commande
+        $commande = Commande::create($data_commande);
 
-       $commande = Commande::create($data_commande);
-
-        $cake = [];
         $gourmandises = $request->input('gourmandises_id');
         $qte = $request->input('gourmandises_qte');
-
+        
+        // Lier la gourmandise et la quantité
         foreach($gourmandises as $key => $value)
         {
              $cakes[] = array(
                  "gourmandise_id" => $value , 
                  "quantity" => $qte[$key]);
         }
-        
+        // Envoyé sur la base de donnée
         foreach($cakes as $cake):
             $gourmandise = Gourmandise::find($cake['gourmandise_id']);
             $gourmandise->commandes()->attach($commande->id, ['quantity' => $cake['quantity']]);
