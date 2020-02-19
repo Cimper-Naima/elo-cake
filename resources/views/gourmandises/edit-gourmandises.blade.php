@@ -18,7 +18,7 @@
       </div><br />
     @endif
 
-    <form class="form-css form-log-rec px-4" method="post" action="{{ route('gourmandises.update', $gourmandises->id)}}">
+    <form id="log-ster" class="form-css form-log-rec px-4" method="post" action="{{ route('gourmandises.update', $gourmandises->id)}}">
     
     
     <div class="form-group">

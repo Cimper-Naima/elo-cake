@@ -18,7 +18,7 @@
     @endif
     
 
-      <form  class="form-css form-log-rec px-4" method="post" action="{{ route('gourmandises.store') }}">
+      <form  id="log-ster" class="form-css form-log-rec px-4" method="post" action="{{ route('gourmandises.store') }}">
           <select name="categorie_id">
                 @foreach($categories as $category)
                     <option value="{{ $category->id }}">{{ $category->name }}</option>
