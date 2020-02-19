@@ -18,7 +18,7 @@ class CheckRole
     {
       if(Auth::user() == null || Auth::user()->role != 1){
 
-        return redirect('welcome'); 
+        return redirect('/'); 
 
     }
 
